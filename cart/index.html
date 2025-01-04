@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Kasutto</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!--Import Google - Nokora Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="left">
+            <a class="logo">KASUTTO.</a>
+            <div class="links">
+                <a href="/index.html">Home</a>
+                <a class="active" href="/products/index.html">Store</a>
+                <a href="/cart/index.html">Catalog</a>
+                <a href="/about/index.html">About Us</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="search-box">
+                <i class="material-symbols-outlined">search</i>
+                <input type="text" placeholder="Search">
+            </div>
+            <a class="nav-button" href="/account/index.html">
+                <i class="material-symbols-outlined">account_circle</i>
+            </a>
+            <a class="nav-button" href="/cart/index.html">
+                <i class="material-symbols-outlined">shopping_cart</i>
+            </a>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="left">
+            <h1>Cart</h1>
+            <div class="cart">
+                <div class="item">
+                    <div class="product">
+                        <img class="product-image" src="/api/product-image/1-1.png" alt="Product Image">
+                        <div class="product-details">
+                            <p>Nike Pegasus Trail 4 - Men's Running Shoes</p>
+                            <p>RM 599.90 | In stock</p>
+                            <div class="product-options">
+                                <select name="size" title="size" id="size" class="size-input">
+                                    <option value="UK 5" selected>UK 5</option>
+                                    <option value="UK 6">UK 6</option>
+                                    <option value="UK 7">UK 7</option>
+                                </select>
+                                <div class="quantity-input">
+                                    <button class="quantity-button">-</button>
+                                    <input type="text" value="1">
+                                    <button class="quantity-button">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-options">
+                        <a class="option-button">
+                            <i class="material-symbols-outlined">favorite</i> Save
+                        </a>
+                        <a class="option-button">
+                            <i class="material-symbols-outlined">delete</i> Delete
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product">
+                        <img class="product-image" src="/api/product-image/2-1.png" alt="Product Image">
+                        <div class="product-details">
+                            <p>Nike Revolution 7 EasyOn - Men's Road Running Shoes</p>
+                            <p>RM 235.90 | In stock</p>
+                            <div class="product-options">
+                                <select name="size" title="size" id="size" class="size-input">
+                                    <option value="UK 5" selected>UK 5</option>
+                                    <option value="UK 6">UK 6</option>
+                                    <option value="UK 7">UK 7</option>
+                                </select>
+                                <div class="quantity-input">
+                                    <button class="quantity-button">-</button>
+                                    <input type="text" value="1">
+                                    <button class="quantity-button">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-options">
+                        <a class="option-button">
+                            <i class="material-symbols-outlined">favorite</i> Save
+                        </a>
+                        <a class="option-button">
+                            <i class="material-symbols-outlined">delete</i> Delete
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Summary</h2>
+            <div class="summary-item">
+                <p>Subtotal</p>
+                <p>RM 835.80</p>
+            </div>
+            <div class="summary-item">
+                <p>Estimated Delivery Cost</p>
+                <p>RM 0.00</p>
+            </div>
+            <div class="summary-item total">
+                <p>Total</p>
+                <p>RM 835.80</p>
+            </div>
+            <div class="checkout">
+                <button class="checkout-button">Guest Checkout</button>
+                <button class="checkout-button">Member Checkout</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+* {
+    font-family: 'Nokora';
+}
+
+.navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    background-image: url('/assets/img/navbar-background.png');
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.navbar .left {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding-left: 48px
+}
+
+.navbar .left .logo {
+    margin-right: 24px;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.navbar .left .links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar .left .links a {
+    margin-right: 16px;
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar .left .links .active {
+    font-weight: bold;
+}
+
+.navbar .right {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 48px;
+}
+
+.navbar .right .search-box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 240px;
+    height: 32px;
+    border-radius: 16px;
+    padding: 0 8px;
+    background-color: #D9D9D9;
+}
+
+.navbar .right .search-box i {
+    font-size: 16px;
+    color: grey;
+    margin-left: 8px;
+}
+
+.navbar .right .search-box input {
+    width: 100%;
+    height: 90%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 8px;
+}
+
+.navbar .right .nav-button {
+    margin-left: 24px;
+    font-size: 24px;
+    color: black;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 24px;
+}
+
+.dashboard .left {
+    margin-left: 48px;
+}
+
+.dashboard .left h1 {
+    margin: 0;
+}
+
+.cart .item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0;
+    padding: 16px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+}
+
+.cart .item .product {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cart .item .product-details {
+    margin-left: 16px;
+}
+
+.cart .item .product .product-options {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cart .item .product .product-options .size-input {
+    border: 1px solid #D9D9D9;
+    height: 28px;
+    padding: 0 12px 0 8px;
+    border-radius: 8px;
+    margin-right: 8px;
+}
+
+.cart .item .product .product-options .quantity-input {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+}
+
+.cart .item .product .product-options .quantity-input button {
+    width: 32px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+}
+
+.cart .item .prodcut .product-options .quantity-input button:focus {
+    color: darkgrey;
+}
+
+.cart .item .product .product-options .quantity-input input {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+}
+
+.cart .item .item-options {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 16px;
+    margin-top: auto;
+}
+
+.cart .item .item-options .option-button {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    color: black;
+    opacity: 0.7;
+}
+
+.cart .item .item-options .option-button i {
+    margin-right: 4px;
+}
+
+.dashboard .right {
+    width: 30%;
+    margin-right: 48px;
+}
+
+.dashboard .right h2 {
+    margin: 0;
+}
+
+.dashboard .right .summary-item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.dashboard .right .summary-item p {
+    margin: 0;
+}
+
+.dashboard .right .total {
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+    padding: 16px 0px;
+}
+
+.dashboard .right .checkout {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.dashboard .right .checkout .checkout-button {
+    width: 100%;
+    height: 48px;
+    background-color: #0047FF;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-size: 16px;
+    margin-top: 8px;
+}
