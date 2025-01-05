@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Kasutto</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!--Import Google - Nokora Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="left">
+            <a class="logo" href="../">KASUTTO.</a>
+            <div class="divider"></div>
+            <p>Order Overview</p>
+        </div>
+        <div class="right">
+            <div class="progress-container">
+                <span class="progress-indicator active">1</span>
+                <p class="progress-text active">Personal Information</p>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-container">
+                <span class="progress-indicator">2</span>
+                <p class="progress-text">Payment Details</p>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-container">
+                <span class="progress-indicator">3</span>
+                <p class="progress-text">Complete Order</p>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="left">
+            <h2>Personal Information</h2>
+            <div class="form">
+                <div class="form-item">
+                    <p class="form-text">Shipping Information<span class="required">*</span></p>
+                    <div class="form-option select-button">
+                        <span class="form-button active">
+                            <i class="material-symbols-outlined">local_shipping</i>
+                            Delivery
+                        </span>
+                        <span class="form-button">
+                            <i class="material-symbols-outlined">package_2</i>
+                            Pickup
+                        </span>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p class="form-text">Full Name<span class="required">*</span></p>
+                    <div class="form-option textfield">
+                        <i class="material-symbols-outlined">person</i>
+                        <input type="text" placeholder="Enter full name">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p class="form-text">Email Address<span class="required">*</span></p>
+                    <div class="form-option textfield">
+                        <i class="material-symbols-outlined">alternate_email</i>
+                        <input type="email" placeholder="Enter email address">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p class="form-text">Phone Number<span class="required">*</span></p>
+                    <div class="form-option textfield">
+                        <select class="country-code" name="country-code" title="country-code">
+                            <option value="+60">🇲🇾</option>
+                            <option value="+1">🇺🇸</option>
+                            <option value="+44">🇬🇧</option>
+                            <option value="+81">🇯🇵</option>
+                            <option value="+82">🇰🇷</option>
+                            <option value="+86">🇨🇳</option>
+                            <option value="+91">🇮🇳</option>
+                        </select>
+                        <input type="text" placeholder="Enter phone number">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p class="form-text">Delivery Address<span class="required">*</span></p>
+                    <div class="form-option textfield">
+                        <i class="material-symbols-outlined">home</i>
+                        <input type="email" placeholder="Enter delivery address">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="form-item">
+                        <p class="form-text">City<span class="required">*</span></p>
+                        <div class="form-option textfield small">
+                            <input type="email" placeholder="Enter city">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <p class="form-text">State<span class="required">*</span></p>
+                        <div class="form-option textfield small">
+                            <input type="email" placeholder="Enter state">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <p class="form-text">Postcode<span class="required">*</span></p>
+                        <div class="form-option textfield small">
+                            <input type="email" placeholder="Enter postcode">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p class="form-text">Country<span class="required">*</span></p>
+                    <div class="form-option textfield">
+                        <div class="form-option select">
+                            <select name="country" title="country">
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="United States">United States</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Japan">Japan</option>
+                                <option value="South Korea">South Korea</option>
+                                <option value="China">China</option>
+                                <option value="India">India</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="form-option checkbox">
+                        <input type="checkbox" id="save-info">
+                        <label for="save-info">My billing address is the same as delivery address</label>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="form-option checkbox">
+                        <input type="checkbox" id="save-info">
+                        <label for="save-info">I have read and agree to the <a href="../terms-and-conditions.html">Terms and Conditions</a> and <a href="../privacy-policy.html">Privacy Policy</a>.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <p>Review your cart</p>
+            <div class="cart">
+                <div class="cart-item">
+                    <div class="cart-image">
+                        <img src="../api/product-image/1-1.png" alt="Product Image">
+                    </div>
+                    <div class="cart-details">
+                        <p class="cart-name">Nike Pegasus Trail 4 - Men's Running Shoes</p>
+                        <p class="cart-size">Size 5 (UK)</p>
+                        <p class="cart-quantity">x1</p>
+                        <p class="cart-price">RM 599.90</p>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="cart-image">
+                        <img src="../api/product-image/2-1.png" alt="Product Image">
+                    </div>
+                    <div class="cart-details">
+                        <p class="cart-name">Nike Revolution 7 EasyOn - Men's Road Running Shoes</p>
+                        <p class="cart-size">Size 5 (UK)</p>
+                        <p class="cart-quantity">x1</p>
+                        <p class="cart-price">RM 235.90</p>
+                    </div>
+                </div>
+                <div class="form">
+                    <div class="form-item">
+                        <div class="form-option textfield">
+                            <i class="material-symbols-outlined">sell</i>
+                            <input type="email" placeholder="Enter promo code">
+                            <a class="apply-button">Apply</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-summary">
+                    <div class="order-summary-item">
+                        <p>Subtotal</p>
+                        <p>RM 835.80</p>
+                    </div>
+                    <div class="order-summary-item">
+                        <p>Shipping</p>
+                        <p>RM 0.00</p>
+                    </div>
+                    <div class="order-summary-item">
+                        <p>Discount</p>
+                        <p>- RM 0.00</p>
+                    </div>
+                    <div class="order-summary-item">
+                        <p>Total</p>
+                        <p>RM 835.80</p>
+                    </div>
+                </div>
+                <div class="checkout">
+                    <a href="../checkout/" class="checkout-button">Pay Now</a>
+                </div>
+                <span class="guarantee-maintext"><i class="material-symbols-outlined">lock</i>Secure Checkout - SSL Encrypted</span>
+                <p class="guarantee-subtext">Ensuring your financial and personal details are secure during every transaction</p>
+            </div>
+        </div>
+</body>
+
+</html>
