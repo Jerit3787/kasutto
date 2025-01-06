@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Kasutto</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!--Import Google - Nokora Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="left">
+            <a class="logo" href="../../">KASUTTO.</a>
+            <div class="divider"></div>
+            <p>Order Overview</p>
+        </div>
+        <div class="right">
+            <div class="progress-container">
+                <span class="progress-indicator completed"><i class="material-symbols-outlined">check</i></span>
+                <p class="progress-text active">Personal Information</p>
+            </div>
+            <div class="progress-line active"></div>
+            <div class="progress-container">
+                <span class="progress-indicator completed"><i class="material-symbols-outlined">check</i></span>
+                <p class="progress-text active">Payment Details</p>
+            </div>
+            <div class="progress-line active"></div>
+            <div class="progress-container">
+                <span class="progress-indicator active">3</span>
+                <p class="progress-text active">Complete Order</p>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="left">
+            <h5>Thank you for your order!</h5>
+            <p>Your order number is <b>x123456789</b></p>
+            <p>We've sent a confirmation email to <b>ahmad.ali@gmail.com</b></p>
+        </div>
+        <div class="right">
+            <h2>Summary Order</h2>
+            <h5>Order summary</h5>
+            <div class="cart">
+                <div class="item">
+                    <div class="product">
+                        <img class="product-image" src="../../api/product-image/1-1.png" alt="Product Image">
+                        <div class="product-details">
+                            <p class="text bold">Nike Pegasus Trail 4 - Men's Running Shoes</p>
+                            <p class="text grey">Size UK 5</p>
+                            <p class="text bold">RM 599.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product">
+                        <img class="product-image" src="../../api/product-image/2-1.png" alt="Product Image">
+                        <div class="product-details">
+                            <p class="text bold">Nike Revolution 7 EasyOn - Men's Road Running Shoes</p>
+                            <p class="text grey">Size UK 5</p>
+                            <p class="text bold">RM 235.90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h5>Shipping Details</h5>
+            <div class="cart">
+                <div class="item">
+                    <div class="product">
+                        <img class="product-image" src="../../api/delivery-image/1-1.png" alt="Delivery Company Image">
+                        <div class="product-details">
+                            <p class="text bold">DHL Delivery (Free Delivery)</p>
+                            <p class="text grey">Expected Delivery: Friday, 22 November 2024</p>
+                            <p class="text bold">Tracking Number: MY99283412</p>
+                            <p class="text grey">Shipping Address<br>Ahmad Ali<br>No 10, Jalan Gombak,<br>53100, Gombak, Selangor,<br>Malaysia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h5>Payment Details</h5>
+            <div class="summary-item">
+                <p class="text grey">Subtotal</p>
+                <p class="text bold">RM 835.80</p>
+            </div>
+            <div class="summary-item">
+                <p class="text grey">Shipping</p>
+                <p class="text bold">RM 0.00</p>
+            </div>
+            <div class="summary-item">
+                <p class="text grey">Discount</p>
+                <p class="text bold">-RM 0.00</p>
+            </div>
+            <div class="summary-item">
+                <p class="text grey bold">Total (inclusive 8% SST)</p>
+                <p class="text bold">RM 835.80</p>
+            </div>
+            <div class="summary-item">
+                <p class="text grey bold">Payment method</p>
+                <p class="text bold"><img src="../../api/payment-image/1-1.png" alt="Company Payment Method">Visa ending in 0000</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
