@@ -87,12 +87,24 @@
     color: white;
 }
 
+.navbar .right .progress-container .progress-indicator.completed {
+    background-color: rgba(0, 71, 255, 0.25);
+    border: 2px solid #0047FF;
+    color: #0047FF;
+}
+
+.navbar .right .progress-container .progress-indicator.completed i {
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .navbar .right .progress-container .progress-text {
     color: darkgrey;
 }
 
 .navbar .right .progress-container .progress-text.active {
     color: black;
+    font-weight: bold;
 }
 
 .navbar .right .progress-line {
@@ -100,6 +112,10 @@
     width: 60px;
     border-top: 2px dashed darkgrey;
     margin-right: 16px;
+}
+
+.navbar .right .progress-line.active {
+    border-top: 2px solid black;
 }
 
 .navbar .right .progress-line.active {
@@ -171,6 +187,11 @@
     padding: 16px;
     border: 1px solid #D9D9D9;
     border-radius: 8px;
+}
+
+.cart .item.active {
+    border: 1px solid #0047FF;
+    background-color: rgba(0, 71, 255, 0.15)
 }
 
 .cart .item .product {
@@ -471,4 +492,8 @@
 
 .text.margin-right {
     margin-right: 8px;
+}
+
+.icon.information {
+    font-size: 14px;
 }

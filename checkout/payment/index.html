@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Kasutto</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!--Import Google - Nokora Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="left">
+            <a class="logo" href="../../">KASUTTO.</a>
+            <div class="divider"></div>
+            <p>Order Overview</p>
+        </div>
+        <div class="right">
+            <div class="progress-container">
+                <span class="progress-indicator completed"><i class="material-symbols-outlined">check</i></span>
+                <p class="progress-text active">Personal Information</p>
+            </div>
+            <div class="progress-line active"></div>
+            <div class="progress-container">
+                <span class="progress-indicator active">2</span>
+                <p class="progress-text active">Payment Details</p>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-container">
+                <span class="progress-indicator">3</span>
+                <p class="progress-text">Complete Order</p>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="left">
+            <h2>Summary Order</h2>
+            <div class="cart">
+                <div class="item">
+                    <div class="product">
+                        <img class="product-image" src="../../api/product-image/1-1.png" alt="Product Image">
+                        <div class="product-details">
+                            <p class="text bold">Nike Pegasus Trail 4 - Men's Running Shoes</p>
+                            <p class="text grey">Size UK 5</p>
+                            <p class="text bold">RM 599.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product">
+                        <img class="product-image" src="../../api/product-image/1-1.png" alt="Product Image">
+                        <div class="product-details">
+                            <p class="text bold">Nike Revolution 7 EasyOn - Men's Road Running Shoes</p>
+                            <p class="text grey">Size UK 5</p>
+                            <p class="text bold">RM 599.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h5>Available Shipping Method <i class="material-symbols-outlined icon information">info</i></h5>
+            <div class="cart">
+                <div class="item active">
+                    <div class="product">
+                        <img class="product-image" src="../../api/delivery-image/1-1.png" alt="Delivery Company Image">
+                        <div class="product-details">
+                            <p class="text bold">DHL Delivery</p>
+                            <p class="text grey">Delivery: 2-3 Working days</p>
+                            <p class="text bold">Free</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h5>Payment details</h5>
+            <p class="text grey">Complete your purchase of item(s) by providing your payment details for this order.</p>
+            <div class="form">
+                <div class="form-item">
+                    <p class="form-text">Shipping Information<span class="required">*</span></p>
+                    <div class="form-option select-button">
+                        <span class="form-button active">
+                            <i class="material-symbols-outlined">credit_card</i>
+                            Credit/Debit Card
+                        </span>
+                        <span class="form-button">
+                            <i class="material-symbols-outlined">account_balance</i>
+                            FPX
+                        </span>
+                        <span class="form-button">
+                            <i class="material-symbols-outlined">credit_card_gear</i>
+                            Easy installment*
+                        </span>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p class="form-text">Email Address<span class="required">*</span></p>
+                    <div class="form-option textfield">
+                        <i class="material-symbols-outlined">alternate_email</i>
+                        <input type="email" placeholder="Enter email address">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p class="form-text">Card Number<span class="required">*</span></p>
+                    <div class="form-option textfield">
+                        <i class="material-symbols-outlined">credit_card</i>
+                        <input type="text" placeholder="Enter card number">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="form-item">
+                        <p class="form-text">Card Expiry Date<span class="required">*</span></p>
+                        <div class="form-option textfield small">
+                            <i class="material-symbols-outlined">calendar_month</i>
+                            <input type="text" placeholder="MM/YY">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <p class="form-text">CVC/CCV<span class="required">*</span></p>
+                        <div class="form-option textfield small">
+                            <i class="material-symbols-outlined">credit_card_gear</i>
+                            <input type="text" placeholder="CVC/CCV">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p class="form-text">Card Holder Name<span class="required">*</span></p>
+                    <div class="form-option textfield">
+                        <i class="material-symbols-outlined">person</i>
+                        <input type="text" placeholder="Enter card holder name">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p class="form-text">Billing Address<span class="required">*</span></p>
+                    <div class="form-option textfield">
+                        <i class="material-symbols-outlined">home</i>
+                        <input type="text" placeholder="Enter billing address">
+                    </div>
+                </div>
+            </div>
+            <div class="summary-item">
+                <p class="text grey">Subtotal</p>
+                <p class="text bold">RM 835.80</p>
+            </div>
+            <div class="summary-item">
+                <p class="text grey">Shipping</p>
+                <p class="text bold">RM 0.00</p>
+            </div>
+            <div class="summary-item">
+                <p class="text grey">Discount</p>
+                <p class="text bold">-RM 0.00</p>
+            </div>
+            <div class="summary-item">
+                <p class="text bold grey">Total (inclusive 8% SST)</p>
+                <p class="text bold">RM 835.80</p>
+            </div>
+            <div class="checkout">
+                <a href="../complete" class="checkout-button">Pay RM 835.80</a>
+            </div>
+            <span class="flex center-x text bold"><i class="material-symbols-outlined text blue margin-right">lock</i>Secure Checkout - SSL Encrypted</span>
+            <p class="text grey">Ensuring your financial and personal details are secure during every transaction</p>
+        </div>
+    </div>
+</body>
+
+</html>
