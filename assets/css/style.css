@@ -308,6 +308,7 @@
     border: 1px solid #D9D9D9;
     border-radius: 6px;
     padding: 4px 24px 4px 8px;
+    cursor: pointer;
 }
 
 .form .form-item .form-option.select-button .form-button.fixed {
