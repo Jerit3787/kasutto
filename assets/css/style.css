@@ -172,6 +172,7 @@
 
 .dashboard .left {
     margin-left: 48px;
+    width: 50%;
 }
 
 .dashboard .left h2 {
@@ -290,7 +291,7 @@
     color: red;
 }
 
-.form .form-item .form-option.select-button {
+.form .form-item .form-option {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -303,11 +304,14 @@
     justify-content: flex-start;
     align-items: center;
     margin-right: 8px;
-    width: 180px;
     color: black;
     border: 1px solid #D9D9D9;
     border-radius: 6px;
-    padding: 4px 8px;
+    padding: 4px 24px 4px 8px;
+}
+
+.form .form-item .form-option.select-button .form-button.fixed {
+    width: 180px;
 }
 
 .form .form-item .form-option.select-button .form-button i {
@@ -322,29 +326,23 @@
     background-color: rgba(0, 72, 255, 0.1);
 }
 
-.form .form-item .form-option.textfield {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
+.form .form-item .form-option.outlined {
     border: 1px solid #D9D9D9;
     border-radius: 6px;
     padding: 0px 6px;
 }
 
-.form .form-item .form-option.textfield.big {
+.form .form-item .form-option.big {
     width: 100%;
 }
 
-.form .form-item .form-option.textfield.small {
-    width: 150px;
+.form .form-item .form-option.small {
+    width: 52px;
 }
 
-.form .form-item .form-option.textfield .country-code {
-    border: none;
-}
-
-.form .form-item .form-option.textfield input {
+.form .form-item .form-option input[type="text"],
+input[type="email"],
+select {
     width: 100%;
     height: 32px;
     border: none;
@@ -352,18 +350,18 @@
     padding: 0 8px;
 }
 
-.form .form-item .form-option.select select {
-    width: 324px;
-    height: 32px;
-    border: none;
-    padding: 0 8px;
-    background-color: white;
-}
-
 .form .column {
     display: grid;
-    grid-template-columns: auto auto auto;
     column-gap: 12px;
+    width: 100%;
+}
+
+.form .column.two {
+    grid-template-columns: 1fr 1fr;
+}
+
+.form .column.three {
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .dashboard .right {
@@ -497,6 +495,15 @@
 .icon.information {
     font-size: 14px;
 }
+
+.text.hover {
+    cursor: pointer;
+}
+
+.text.hover:active {}
+
+
+/* Override default browser styles */
 
 select {
     padding-right: 24px !important;
