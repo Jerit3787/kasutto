@@ -481,6 +481,8 @@ select {
     gap: 16px;
     padding-top: 16px;
     margin-left: 48px;
+    overflow-y: scroll;
+    width: 100%;
 }
 
 .cards.catalog {
