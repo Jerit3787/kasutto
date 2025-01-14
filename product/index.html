@@ -41,56 +41,32 @@
     <div class="dashboard no-margin">
         <div class="left">
             <!-- TODO: FIX THIS IMAGE PRODUCT TO BE PROPERLY SCALED ACROSS MULTIPLE DISPLAY SIZES-->
-            <img class="main-product" src="/api/product-image/1-1-1.png" title="Selected Product Image">
+            <img class="main-product" title="Selected Product Image">
             <div class="images">
-                <div class="image-item active">
-                    <img src="/api/product-image/2-1.png" title="Product Image 1">
-                </div>
-                <div class="image-item">
-                    <img src="/api/product-image/3-1.png" title="Product Image 1">
-                </div>
-                <div class="image-item">
-                    <img src="/api/product-image/4-1.png" title="Product Image 1">
-                </div>
-                <div class="image-item">
-                    <img src="/api/product-image/5-1.png" title="Product Image 1">
-                </div>
-                <div class="image-item">
-                    <img src="/api/product-image/1-7.png" title="Product Image 1">
-                </div>
-                <div class="image-item">
-                    <img src="1-7.png" title="Product Image 1">
-                </div>
-                <div class="image-item">
-                    <img src="1-8.png" title="Product Image 1">
-                </div>
-                <div class="image-item">
-                    <img src="1-9.png" title="Product Image 1">
-                </div>
             </div>
         </div>
         <div class="right product column gap">
             <div class="breadcrumps">
                 <a>Shop</a>
                 <i class="material-symbols-outlined">chevron_right</i>
-                <a>Men's Running Shoes</a>
+                <a id="directory-category"></a>
             </div>
             <div>
-                <h1>Nike Pegasus Trail 4</h1>
-                <h1>Men's Running Shoes</h1>
+                <h1 id="title"></h1>
+                <h1 id="category"></h1>
             </div>
             <div class="row">
                 <div class="row">
-                    <i class="material-symbols-outlined filled text yellow">star</i>
+                    <i id="star" class="material-symbols-outlined filled text yellow">star</i>
                     <i class="material-symbols-outlined filled text yellow">star</i>
                     <i class="material-symbols-outlined filled text yellow">star</i>
                     <i class="material-symbols-outlined filled text yellow">star</i>
                     <i class="material-symbols-outlined text yellow">star_HALF</i>
-                    <p class="text icon after no-margin">5.0</p>
+                    <p id="rating-text" class="text icon after no-margin"></p>
                 </div>
                 <div class="row margin-left-2 text hover">
                     <i class="material-symbols-outlined text icon before">comment</i>
-                    <p class="no-margin">120 comments</p>
+                    <p id="comment-text" class="no-margin">120 comments</p>
                 </div>
             </div>
             <div class="row">
@@ -100,34 +76,10 @@
                     <i class="material-symbols-outlined text icon after">arrow_forward</i>
                 </div>
             </div>
-            <div class="row">
-                <div class="size active">
-                    <p>6</p>
-                </div>
-                <div class="size">
-                    <p>7</p>
-                </div>
-                <div class="size">
-                    <p>8</p>
-                </div>
-                <div class="size">
-                    <p>9</p>
-                </div>
-                <div class="size">
-                    <p>10</p>
-                </div>
+            <div id="sizes" class="row">
             </div>
             <p class="text bold no-margin">Colours available</p>
-            <div class="row">
-                <div class="colour active">
-                    <div class="circle" style="background-color: #3B464C;"></div>
-                </div>
-                <div class="colour">
-                    <div class="circle" style="background-color: #000000;"></div>
-                </div>
-                <div class="colour">
-                    <div class="circle" style="background-color: #FFFFFF;"></div>
-                </div>
+            <div id="colours" class="row">
             </div>
             <p class="text green no-margin">In stock</p>
             <div class="row">
@@ -137,7 +89,8 @@
         </div>
     </div>
 
-    <script src="script_product.js"> </script>
+    <script src="../assets/js/product.js" type="module">
+    </script>
 </body>
 
 </html>

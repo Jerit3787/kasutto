@@ -1,20 +1,9 @@
-import { getProducts, createCard, getCategoryProducts } from './utility.js';
+import { getProducts, createCard, getCategoryProducts, getQueryParams, addQueryParams } from './utility.js';
 
 function loadCatalog(products) {
     products.forEach(product => {
         createCard(product);
     });
-}
-
-function checkQueryParams() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams;
-}
-
-function addQueryParams(name, value) {
-    const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set(name, value);
-    window.location.search = urlParams.toString();
 }
 
 function loadCategoryButtons() {
@@ -28,10 +17,9 @@ function loadCategoryButtons() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    var queryParams = checkQueryParams();
-    var hasQueryParams = queryParams.size == 0 ? false : true;
+    var category = getQueryParams('category');
+    var hasQueryParams = !category ? false : true;
     if (hasQueryParams) {
-        var category = queryParams.get('category');
         console.log(category.toLowerCase().replace(" ", "-"))
         document.getElementById(category.toLowerCase().replace(" ", "-").replace(" ", "-")).classList.add('active');
         document.getElementById('page-title').textContent = category;

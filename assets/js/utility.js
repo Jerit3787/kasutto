@@ -43,6 +43,10 @@ export function createCard(product) {
     card.appendChild(color);
     card.appendChild(prices);
 
+    card.addEventListener('click', () => {
+        window.location.href = `../product/?id=${product.id}&color=0`;
+    });
+
     var catalog = document.getElementById("catalog");
     catalog.appendChild(card);
 }
@@ -66,4 +70,23 @@ export function getCategoryProducts(category) {
             resolve(products.filter(product => product.category === category));
         });
     })
+}
+
+export function getProductsById(id) {
+    return new Promise((resolve, reject) => {
+        getProducts().then((products) => {
+            resolve(products.filter(product => product.id === parseInt(id))[0]);
+        });
+    })
+}
+
+export function getQueryParams(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+export function addQueryParams(name, value) {
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set(name, value);
+    window.location.search = urlParams.toString();
 }

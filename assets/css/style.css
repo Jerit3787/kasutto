@@ -548,16 +548,22 @@ p.no-margin {
     height: 16px;
 }
 
+#sizes {
+    flex-flow: row wrap;
+    row-gap: 8px;
+}
+
 .size {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-    width: 40px;
+    width: auto;
     height: 40px;
     border-radius: 6px;
     margin-right: 8px;
+    padding: 0px 8px;
 }
 
 .button {
@@ -729,13 +735,13 @@ p.no-margin {
 }
 
 .colour {
-    width: 40px;
-    height: 40px;
+    width: 78px;
+    height: 78px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    border-radius: 8px;
     margin-right: 8px;
     cursor: pointer;
 }
@@ -744,11 +750,10 @@ p.no-margin {
     border: 1px solid black;
 }
 
-.colour .circle {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid black;
+.colour img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
 }
 
 .page-404 {
