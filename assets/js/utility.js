@@ -338,3 +338,37 @@ export function removeCartItem(index) {
     localStorage.setItem('cart', JSON.stringify(cart));
     window.location.reload();
 }
+
+export function createCheckoutCard(productItem, indexImg, sizeGiven, quantityValue, indexCart) {
+    var cartItem = document.createElement('div');
+    var cartImage = document.createElement('div');
+    var img = document.createElement('img');
+    var cartDetails = document.createElement('div');
+    var name = document.createElement('p');
+    var size = document.createElement('p');
+    var quantity = document.createElement('p');
+    var price = document.createElement('p');
+
+    cartItem.setAttribute('class', 'cart-item');
+    cartImage.setAttribute('class', 'cart-image');
+    img.setAttribute('src', productItem.images[indexImg][0]);
+    img.setAttribute('alt', productItem.title);
+    name.textContent = `${productItem.title} - ${productItem.category} Shoes`;
+    name.setAttribute('class', 'cart-name');
+    size.textContent = `Size ${sizeGiven}`;
+    size.setAttribute('class', 'cart-size');
+    quantity.textContent = `x${quantityValue}`;
+    quantity.setAttribute('class', 'cart-quantity');
+    price.textContent = `RM ${productItem.price.toFixed(2)}`;
+    price.setAttribute('class', 'cart-price');
+
+    cartImage.appendChild(img);
+    cartDetails.appendChild(name);
+    cartDetails.appendChild(size);
+    cartDetails.appendChild(quantity);
+    cartDetails.appendChild(price);
+    cartItem.appendChild(cartImage);
+    cartItem.appendChild(cartDetails);
+
+    document.querySelector('.cart').appendChild(cartItem);
+}

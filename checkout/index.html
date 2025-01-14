@@ -142,41 +142,19 @@
         <div class="right">
             <p class="text bold">Review your cart</p>
             <div class="cart">
-                <div class="cart-item">
-                    <div class="cart-image">
-                        <img src="../1-1.png" alt="Product Image">
-                    </div>
-                    <div class="cart-details">
-                        <p class="cart-name">Nike Pegasus Trail 4 - Men's Running Shoes</p>
-                        <p class="cart-size">Size 5 (UK)</p>
-                        <p class="cart-quantity">x1</p>
-                        <p class="cart-price">RM 599.90</p>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="cart-image">
-                        <img src="../2-1.png" alt="Product Image">
-                    </div>
-                    <div class="cart-details">
-                        <p class="cart-name">Nike Revolution 7 EasyOn - Men's Road Running Shoes</p>
-                        <p class="cart-size">Size 5 (UK)</p>
-                        <p class="cart-quantity">x1</p>
-                        <p class="cart-price">RM 235.90</p>
-                    </div>
-                </div>
-                <div class="form">
-                    <div class="form-item">
-                        <div class="form-option outlined">
-                            <i class="material-symbols-outlined">sell</i>
-                            <input type="email" placeholder="Enter promo code">
-                            <a class="text blue bold hover">Apply</a>
-                        </div>
+            </div>
+            <div class="form">
+                <div class="form-item">
+                    <div class="form-option outlined">
+                        <i class="material-symbols-outlined">sell</i>
+                        <input type="email" placeholder="Enter promo code">
+                        <a class="text blue bold hover">Apply</a>
                     </div>
                 </div>
             </div>
             <div class="summary-item">
                 <p class="text grey">Subtotal</p>
-                <p class="text bold">RM 835.80</p>
+                <p id="subtotal" class="text bold">RM 835.80</p>
             </div>
             <div class="summary-item">
                 <p class="text grey">Shipping</p>
@@ -184,21 +162,21 @@
             </div>
             <div class="summary-item">
                 <p class="text grey">Discount</p>
-                <p class="text bold">- RM 0.00</p>
+                <p id="discount" class="text bold">- RM 0.00</p>
             </div>
             <div class="summary-item">
                 <p class="text grey bold">Total (inclusive SST 8%)</p>
-                <p class="text bold">RM 835.80</p>
+                <p id="total" class="text bold">RM 835.80</p>
             </div>
             <div class="checkout">
-                <a href="../checkout/payment/index.html" class="button primary">Pay Now</a>
+                <a href="../checkout/payment/" class="button primary">Pay Now</a>
             </div>
             <span class="flex center-x text bold"><i class="material-symbols-outlined text blue margin-right">lock</i>Secure Checkout - SSL Encrypted</span>
             <p class="text grey">Ensuring your financial and personal details are secure during every transaction</p>
         </div>
     </div>
 
-    <script src="script_checkout.js"></script>
+    <script src="../assets/js/checkout.js" type="module"></script>
 </body>
 
 </html>
