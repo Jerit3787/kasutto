@@ -64,20 +64,22 @@ export function getProducts() {
     });
 }
 
-export function getCategoryProducts(category) {
+export function getProductsByCategory(products, category) {
     return new Promise((resolve, reject) => {
-        getProducts().then((products) => {
-            resolve(products.filter(product => product.category === category));
-        });
+        resolve(products.filter(product => product.category === category));
     })
 }
 
-export function getProductsById(id) {
+export function getProductsBySize(products, size) {
     return new Promise((resolve, reject) => {
-        getProducts().then((products) => {
-            resolve(products.filter(product => product.id === parseInt(id))[0]);
-        });
+        resolve(products.filter(product => product.sizes.includes(size)));
     })
+}
+
+export function getProductsById(products, id) {
+    return new Promise((resolve, reject) => {
+        resolve(products.filter(product => product.id === parseInt(id))[0]);
+    });
 }
 
 export function getQueryParams(name) {
@@ -99,4 +101,18 @@ export function loadProducts(products) {
 
 export function sortByRating(products) {
     return products.sort((a, b) => b.rating - a.rating);
+}
+
+export function compileAvailableSizes(products) {
+    const sizes = [];
+
+    products.forEach(product => {
+        product.sizes.forEach(size => {
+            if (!sizes.includes(size)) {
+                sizes.push(size);
+            }
+        });
+    });
+    console.log(sizes);
+    return sizes;
 }

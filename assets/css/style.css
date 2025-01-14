@@ -480,6 +480,7 @@ select {
     padding: 16px 0px 0px 16px;
     margin-right: 48px;
     flex-flow: row wrap;
+    width: 100%;
 }
 
 .dashboard .catalog .catalog-header {

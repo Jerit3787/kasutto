@@ -1,10 +1,10 @@
-import { getProductsById, getQueryParams } from "./utility.js";
+import { getProducts, getProductsById, getQueryParams } from "./utility.js";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     var id = getQueryParams('id');
-    getProductsById(id).then((product) => {
-        loadProduct(product);
-    });
+    var products = await getProducts();
+    var product = await getProductsById(products, id);
+    loadProduct(product);
 });
 
 function loadProduct(product) {
