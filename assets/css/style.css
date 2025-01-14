@@ -164,6 +164,7 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 24px;
+    width: 100%;
 }
 
 .dashboard.single {
@@ -405,7 +406,7 @@ select {
     border: 1px solid #D9D9D9;
     border-style: none solid;
     margin-left: 48px;
-    height: 100vh;
+    height: 100%;
 }
 
 .dashboard .filter .title {
@@ -578,12 +579,13 @@ p.no-margin {
     margin-left: 5px;
 }
 
+.filter-dropdown {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
 #price-filter {
     padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 20px;
     width: calc(100% - 20px);
 }
 
@@ -604,6 +606,11 @@ p.no-margin {
     margin-right: 8px;
     padding: 0px 8px;
     cursor: pointer;
+}
+
+#colour-filter .size,
+#size-filter .size {
+    margin-right: 0px;
 }
 
 .size:hover {

@@ -192,7 +192,7 @@ export function loadProductsWithColour(products, colorIndexArray) {
     });
 }
 
-export function sortByRating(products) {
+export function sortProductsByRating(products) {
     return products.sort((a, b) => b.rating - a.rating);
 }
 
@@ -212,4 +212,16 @@ export function compileAvailableSizes(products) {
 
 export function compileAvailableColours() {
     return COLOURS;
+}
+
+export function sortProductsByPrice(products) {
+    return products.sort((a, b) => a.price - b.price);
+}
+
+export function sortProductsByName(products) {
+    return products.sort((a, b) => a.title.localeCompare(b.title));
+}
+
+export function sortProductsByCategory(products) {
+    return products.sort((a, b) => a.category.localeCompare(b.category));
 }

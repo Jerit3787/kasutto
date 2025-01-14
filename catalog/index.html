@@ -93,7 +93,7 @@
                 <i class="material-symbols-outlined">keyboard_arrow_down</i>
             </div>
             <div>
-                <div id="size-filter" class="grid-column two">
+                <div id="size-filter" class="grid-column two gap-row">
                 </div>
             </div>
             <div class="filter-dropdown">
@@ -101,18 +101,19 @@
                 <i class="material-symbols-outlined">keyboard_arrow_down</i>
             </div>
             <div>
-                <div id="colour-filter" class="grid-column two">
+                <div id="colour-filter" class="grid-column two gap-row">
                 </div>
             </div>
         </div>
         <div class="catalog">
             <div class="catalog-header">
                 <h2 id="page-title">Catalog</h2>
-                <select name="sort" title="sort" class="text black small">
-                    <option value="data" selected disabled>Sort By</option>
-                    <option value="data">Name</option>
-                    <option value="data">Price</option>
-                    <option value="data">Type</option>
+                <select id="sort-products" name="sort" title="sort" class="text black small">
+                    <option value="default" selected disabled>Sort By</option>
+                    <option value="name">Name</option>
+                    <option value="price">Price</option>
+                    <option value="category">Category</option>
+                    <option value="rating">Rating</option>
                 </select>
             </div>
             <div id="catalog" class="cards catalog">

@@ -1,4 +1,4 @@
-import { getProducts, createCard, getProductsByCategory, getQueryParams, getProductsByColour, addQueryParams, loadProducts, compileAvailableSizes, getProductsBySize, compileAvailableColours, getProductsByColourWithIndex, loadProductsWithColour, getProductByMinPrice, getProductByMaxPrice } from './utility.js';
+import { getProducts, createCard, getProductsByCategory, getQueryParams, getProductsByColour, addQueryParams, loadProducts, compileAvailableSizes, getProductsBySize, compileAvailableColours, getProductsByColourWithIndex, loadProductsWithColour, getProductByMinPrice, getProductByMaxPrice, sortProductsByPrice, sortProductsByName, sortProductsByCategory, sortProductsByRating } from './utility.js';
 
 function loadCategoryButtons() {
     var buttons = document.querySelectorAll('.filter-item');
@@ -61,11 +61,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     var hasQueryParams = searchParams.size === 0 ? false : true;
     var products = await getProducts();
     if (hasQueryParams) {
-        var sizes = compileAvailableSizes(products).sort();
-        var colours = compileAvailableColours(products).sort();
-        loadSizes(sizes);
-        loadColours(colours);
-        loadPriceRangeSliders();
+        loadForms(products);
         products = await filterProducts(products, searchParams);
         if (searchParams.has('category')) {
             var category = getQueryParams('category');
@@ -89,6 +85,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             var priceMax = getQueryParams('price-max');
             updatePriceMaxValue(priceMax);
         }
+        if (searchParams.has('sort')) {
+            var sortType = getQueryParams('sort');
+            document.getElementById('sort-products').value = sortType;
+            products = await sortProducts(products, sortType);
+        }
         if (searchParams.has('colour')) {
             loadProductsWithColour(products, productsWithColours);
         } else {
@@ -96,14 +97,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     } else {
         loadProducts(products);
-        var sizes = compileAvailableSizes(products).sort();
-        var colours = compileAvailableColours(products).sort();
-        loadSizes(sizes);
-        loadColours(colours);
-        loadPriceRangeSliders();
+        loadForms(products);
     }
     loadCategoryButtons();
 })
+
+function loadForms(products) {
+    var sizes = compileAvailableSizes(products).sort();
+    var colours = compileAvailableColours(products).sort();
+    loadSizes(sizes);
+    loadColours(colours);
+    loadPriceRangeSliders();
+    loadSort();
+}
+
+function loadSort() {
+    var sortObj = document.getElementById('sort-products');
+    sortObj.addEventListener('change', () => {
+        addQueryParams([{ "name": 'sort', "value": sortObj.value }]);
+    });
+}
 
 function filterProducts(products, searchParams) {
     return new Promise(async (resolve, reject) => {
@@ -131,6 +144,27 @@ function filterProducts(products, searchParams) {
         }
         console.log(products);
         resolve(products);
+    })
+}
+
+function sortProducts(products, sortType) {
+    return new Promise((resolve, reject) => {
+        switch (sortType) {
+            case 'price':
+                resolve(sortProductsByPrice(products));
+                break;
+            case 'rating':
+                resolve(sortProductsByRating(products));
+                break;
+            case 'name':
+                resolve(sortProductsByName(products));
+                break;
+            case 'category':
+                resolve(sortProductsByCategory(products));
+                break;
+            default:
+                break;
+        }
     })
 }
 

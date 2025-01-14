@@ -1,8 +1,8 @@
-import { getProducts, loadProducts, sortByRating } from "./utility.js"
+import { getProducts, loadProducts, sortProductsByRating } from "./utility.js"
 
 document.addEventListener('DOMContentLoaded', () => {
     getProducts().then((products) => {
-        var sortedProducts = sortByRating(products);
+        var sortedProducts = sortProductsByRating(products);
         loadProducts(sortedProducts);
     })
 })
