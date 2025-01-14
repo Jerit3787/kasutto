@@ -1498,56 +1498,127 @@
     }, {
         "id": 17,
         "title": "Nike Phantom GX 2 Elite",
-        "category": "Football",
-        "price": 1229,
         "gender": "Men",
-        "sizes": [],
+        "category": "Football",
+        "price": 919,
+        "sizes": [
+            "UK 6 (EU 40)",
+            "UK 6.5",
+            "UK 7",
+            "UK 7.5",
+            "UK 8",
+            "UK 8.5",
+            "UK 9",
+            "UK 9.5",
+            "UK 10",
+            "UK 11"
+        ],
         "images": [
             [
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/636b4542-f41b-4601-8323-6cee686c856c/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1ed8513a-46bf-4f7d-96de-58f681f2d035/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/86e84aa7-2c01-4d33-9e4c-5ce37639fe84/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8481edec-ae35-4e10-bf66-bd47bb9905cc/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5d5cbd47-4ff2-4331-ba94-061f5bb7c7fd/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2628ecba-26a5-4d73-bd18-2c13afef5132/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/84b5617d-61d6-44ee-97d1-995a7ef95375/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1282f4d5-14f9-41ab-a739-a23f2df4d35c/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/998227a8-e3a5-4d5a-a58f-5ad541333ac0/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d88f32a0-dcd2-4a7a-bcf2-56a17bc66a6d/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/86e5c45b-d288-4940-9e30-f98e3eb1fe34/PHANTOM+GX+II+ELITE+FG+EH.png"
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8937af70-c95a-4886-91f4-3ce7c86f5bc4/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/95cceed9-476a-4765-9f9f-08bce4bb9c3b/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f19a1eb4-639f-404a-beef-ab0e02ae2153/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c4ca9582-6c94-4770-86af-f62214faf81a/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/db12e8b7-9042-44b0-9d2c-744b83a3e0ad/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c86d0cf2-4175-43c5-9b88-e443e2ce2115/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/05571b72-6a4a-40e4-b40a-a343ee7e3274/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5988fc4a-e2a3-48bf-afd5-274d0ecac684/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/314d8855-61d0-4acc-8c78-8b1d8e7cdd88/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2aa81ba9-7c20-4dba-aa9a-fbe027e97c19/PHANTOM+GX+II+ELITE+FG.png"
             ],
             [
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e0c25dae-4835-4f9a-88f8-042761fe8ebe/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/12ffe6bd-81ca-414d-b2a3-60583171bc53/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/be43df0b-3474-4e1b-bcc5-a43e5eb3bdc2/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/89b4b39b-d845-4f49-a2f7-7ec3897f2898/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f9478fc0-47c6-4e3e-afa5-6a919f69cbc1/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5acba24b-3d09-4403-9b69-474ef5fb3460/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8f41972a-506d-4251-b4c9-801183eda835/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ca20f92a-2bd7-48c5-9332-77657331639a/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6f3f12c6-d9be-46dc-9ce2-347ac101f97c/PHANTOM+GX+II+ELITE+FG+EH.png",
-                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b769a209-57bc-4282-ae09-81e629ed9ce3/PHANTOM+GX+II+ELITE+FG+EH.png"
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6b86256b-f6ae-4d1d-ac59-21e06db1983c/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b7439589-5350-4527-a004-6874df121a4a/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a51ed4cd-cb90-4997-ad6b-e01287f29858/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3de8bdd7-427f-4ed3-bb2e-1d726df473bb/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/098398d7-53c5-4347-b282-b408c0ec9fe5/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4763b0c6-2101-4caf-b2ec-afe0eb0bbc5c/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/dc24e261-de85-4356-a85c-5f2d33377504/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/df9d7da2-5470-4da0-a5b2-11bcad04077d/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ce1e21ad-8d04-4f60-9bd6-1746832cb0b9/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b9319060-d1c0-4cae-84e9-0ebee0da5e1a/PHANTOM+GX+II+ELITE+FG.png"
+            ],
+            [
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6f8f1ed7-5b08-4c76-9067-dbd43557bf16/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/28bcb91e-393b-48eb-af06-3ecffff438bb/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a27af7eb-bc04-47ab-a33d-93b1bfc5b7f4/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c59240e6-fab2-4cd9-8a5d-c665b0780464/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/320d9d71-f41c-4903-9aec-9b37fcb1ec71/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6caac666-0794-46d8-8e38-7f370bfdeeea/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/988fdba4-36fa-4a73-934b-48810234f125/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/abf10546-d0d0-4f23-9e7a-29b88a8ac373/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d155cf0e-b1b4-4177-af6b-5a3e027a3867/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c225a9b8-d37f-4f84-95e9-d3e81f0317fb/PHANTOM+GX+II+ELITE+FG.png"
+            ],
+            [
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/22ccc03e-b68a-4934-983b-3ea7808222b8/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/50b1a25b-2469-485f-862d-996281bc1a6c/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c8f453bb-adb2-4102-8bba-dda47de214cd/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e2b38627-48d1-411c-bc4b-0e3a0e5def39/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/40981e7a-b42f-494b-bb99-c5f9a8820e63/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2e65b8f5-6d74-4cff-9b02-a04d9db9f6ff/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/21291771-f804-41eb-b893-2b9425c105e5/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/290f08ba-3571-4be5-8ddb-0ad766ea36a2/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a9c35fc6-d78b-4392-a99c-53aa3683680b/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/13bdbb66-c1b7-400f-902f-ab5057a742cb/PHANTOM+GX+II+ELITE+FG.png"
+            ],
+            [
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d1b9ef49-9475-4cf5-bbd8-0deca1036bf7/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/93f5f481-f97c-494a-b090-782307e6a8c6/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d7347b40-6b34-442f-b208-d9bef71f9050/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/39a10aaf-ce0b-42a0-a6e2-c4df578ea335/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c3854a17-c2c9-4600-bd57-67ce844db147/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4f92daba-a311-4a51-aa74-80dd842d9689/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0913e164-2e32-4bff-8bbf-ca5eb859ce10/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/646d0179-e31e-4029-bd54-fed152ef9820/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8a850267-167d-4cb3-9ae7-68edc804a17c/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/23b009d0-bd58-4c94-bb91-8a93a1019d82/PHANTOM+GX+II+ELITE+FG.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7c4b09ba-368e-4a92-ad0b-c888ed50c424/PHANTOM+GX+II+ELITE+FG.png"
             ]
         ],
-        "numOfColours": 2,
+        "numOfColours": 5,
         "colours": [{
-                "img": "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco/460ac93c-b78b-41b2-8f72-b5090c2c31e7/PHANTOM+GX+II+ELITE+FG+EH.png",
+                "img": "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco/f03a2c40-6c16-4f34-811f-9275c057c547/PHANTOM+GX+II+ELITE+FG.png",
                 "colour": [
-                    "Bright Crimson",
+                    "Blue Fury",
                     "White"
                 ]
             },
             {
-                "img": "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco/d07dac91-e45c-4262-a1ae-0d8584553571/PHANTOM+GX+II+ELITE+FG+EH.png",
+                "img": "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco/3873d1b3-d130-4fcd-b0e7-b607d0cc7287/PHANTOM+GX+II+ELITE+FG.png",
                 "colour": [
-                    "Blue Void",
-                    "Chrome"
+                    "Black",
+                    "Deep Jungle",
+                    "Black"
+                ]
+            },
+            {
+                "img": "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco/d2053e48-e7c8-44e8-992f-f1470b2257e5/PHANTOM+GX+II+ELITE+FG.png",
+                "colour": [
+                    "Metallic Silver",
+                    "Volt",
+                    "Black"
+                ]
+            },
+            {
+                "img": "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco/979397f5-8f64-4f72-886e-108bbd552719/PHANTOM+GX+II+ELITE+FG.png",
+                "colour": [
+                    "Mint",
+                    "Off-Noir",
+                    "Atomic Red"
+                ]
+            },
+            {
+                "img": "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco/2ff5f7f0-05f2-4c0a-9cbf-a466b834762b/PHANTOM+GX+II+ELITE+FG.png",
+                "colour": [
+                    "Sunset Pulse",
+                    "Black"
                 ]
             }
         ],
-        "rating": 5,
-        "numOfComment": 2,
-        "description": "Obsessed with perfecting your craft? We made this for you. In the middle of the storm, with chaos swirling all around you, you've calmly found the final third of the pitch. Go finish the job in the Phantom GX 2 Elite. Revolutionary Nike Gripknit covers the striking area of the boot while Nike Cyclone 360 traction helps guide your unscripted agility. We design Elite boots for you and the world's biggest stars to give you high-level quality, because you demand greatness from yourself and your footwear. This version celebrates Erling Haaland's Norwegian roots."
+        "rating": 4,
+        "numOfComment": 27,
+        "description": "Obsessed with perfecting your craft? We made this for you. In the middle of the storm, with chaos swirling all around you, you've calmly found the final third of the pitch, thanks to your uncanny mix of on-ball guile and grace. Go finish the job in the Phantom GX 2 Elite. We design Elite boots for you and the world's biggest stars to give you high-level quality, because you demand greatness from yourself and your footwear."
     }, {
         "id": 18,
         "title": "Nike Tiempo Legend 10 Elite",
