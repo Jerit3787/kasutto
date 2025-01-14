@@ -20,6 +20,15 @@ function loadProduct(product) {
         div.setAttribute('class', 'size');
         p.textContent = size;
 
+        div.addEventListener('click', () => {
+            try {
+                document.querySelector('.size.active').classList.remove('active');
+            } catch (error) {
+                console.log(error);
+            }
+            div.classList.add('active');
+        });
+
         document.getElementById('sizes').appendChild(div).appendChild(p);
     });
 
