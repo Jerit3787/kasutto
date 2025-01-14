@@ -1,10 +1,11 @@
-import { getProducts, getProductsById, getQueryParams } from "./utility.js";
+import { getProducts, getProductsById, getQueryParams, addQueryParams } from "./utility.js";
 
 document.addEventListener('DOMContentLoaded', async () => {
     var id = getQueryParams('id');
     var products = await getProducts();
     var product = await getProductsById(products, id);
-    loadProduct(product);
+    loadProduct(product[0]);
+    document.getElementById('add-to-cart').addEventListener('click', updateCart);
 });
 
 function loadProduct(product) {
@@ -13,11 +14,18 @@ function loadProduct(product) {
     document.getElementById('title').textContent = product.title;
     document.getElementById('category').textContent = `${product.category} Shoes`;
     document.getElementById('comment-text').textContent = `${product.numOfComment} comments`;
+    var sizeQuery = getQueryParams('size') ? getQueryParams('size') : product.sizes[0];
     product.sizes.forEach(size => {
         var div = document.createElement('div');
         var p = document.createElement('p');
+        console.log(sizeQuery)
+        console.log(size)
 
-        div.setAttribute('class', 'size');
+        if (sizeQuery == size) {
+            div.setAttribute('class', 'size active');
+        } else {
+            div.setAttribute('class', 'size');
+        }
         p.textContent = size;
 
         div.addEventListener('click', () => {
@@ -27,6 +35,7 @@ function loadProduct(product) {
                 console.log(error);
             }
             div.classList.add('active');
+            addQueryParams([{ "name": 'size', "value": size }]);
         });
 
         document.getElementById('sizes').appendChild(div).appendChild(p);
@@ -61,6 +70,7 @@ function loadProduct(product) {
             document.querySelector('.colour.active').classList.remove('active');
             div.classList.add('active');
             loadProductImages(mainProduct, index);
+            addQueryParams([{ "name": 'color', "value": index }]);
         });
 
         document.getElementById('colours').appendChild(div).appendChild(img);
@@ -127,4 +137,17 @@ function updateStarRating(rating) {
     ratingText.textContent = rating.toFixed(1);
     ratingText.setAttribute('class', 'text icon after no-margin');
     starContainer.appendChild(ratingText);
+}
+
+function updateCart() {
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    var data = {
+        "id": getQueryParams('id'),
+        "color": getQueryParams('color'),
+        "size": getQueryParams('size'),
+        "quantity": 1,
+    }
+    cart.push(data);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert("Added to cart!");
 }

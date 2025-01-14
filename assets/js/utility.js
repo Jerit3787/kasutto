@@ -115,7 +115,7 @@ export function getProductsBySize(products, size) {
 
 export function getProductsById(products, id) {
     return new Promise((resolve, reject) => {
-        resolve(products.filter(product => product.id === parseInt(id))[0]);
+        resolve(products.filter(product => product.id === parseInt(id)));
     });
 }
 
@@ -224,4 +224,117 @@ export function sortProductsByName(products) {
 
 export function sortProductsByCategory(products) {
     return products.sort((a, b) => a.category.localeCompare(b.category));
+}
+
+export function createCartCard(productItem, indexImg, size, quantityValue, indexCart) {
+    var item = document.createElement('div');
+    var product = document.createElement('div');
+    var img = document.createElement('img');
+    var productDetails = document.createElement('div');
+    var title = document.createElement('p');
+    var price = document.createElement('p');
+    var productOptions = document.createElement('div');
+    var select = document.createElement('select');
+    var quantityInput = document.createElement('div');
+    var minusButton = document.createElement('button');
+    var quantity = document.createElement('input');
+    var plusButton = document.createElement('button');
+    var itemOptions = document.createElement('div');
+    var favouriteButton = document.createElement('a');
+    var removeButton = document.createElement('a');
+
+    console.log(productItem);
+
+    img.setAttribute('src', productItem.images[indexImg][0]);
+    img.setAttribute('alt', productItem.title);
+    img.setAttribute('class', 'product-image');
+    title.textContent = `${productItem.title} - ${productItem.category} Shoes`;
+    price.textContent = `RM ${productItem.price.toFixed(2)} | In stock`;
+    select.setAttribute('id', 'size');
+    select.setAttribute('name', 'size');
+    select.setAttribute('title', 'Size');
+    select.setAttribute('class', 'size-input');
+
+    productItem.sizes.forEach(size => {
+        var option = document.createElement('option');
+        option.setAttribute('value', size);
+        option.textContent = size;
+        select.appendChild(option);
+    });
+
+    select.value = size;
+    quantityInput.setAttribute('class', 'quantity-input');
+    minusButton.setAttribute('class', 'quantity-button');
+    plusButton.setAttribute('class', 'quantity-button');
+    plusButton.textContent = '+';
+    minusButton.textContent = '-';
+    quantity.setAttribute('type', 'text');
+    quantity.setAttribute('value', quantityValue);
+    itemOptions.setAttribute('class', 'item-options');
+    favouriteButton.setAttribute('class', 'option-button');
+    favouriteButton.innerHTML = '<i class="material-symbols-outlined">favorite</i> Save';
+    removeButton.setAttribute('class', 'option-button');
+    removeButton.innerHTML = '<i class="material-symbols-outlined">delete</i> Remove';
+    item.setAttribute('class', 'item');
+    product.setAttribute('class', 'product');
+    productDetails.setAttribute('class', 'product-details');
+    productOptions.setAttribute('class', 'product-options');
+
+    removeButton.addEventListener('click', () => {
+        removeCartItem(indexCart);
+    });
+
+    select.setAttribute('id', `select-${indexCart}`);
+    quantity.setAttribute('id', `quantity-${indexCart}`);
+
+    plusButton.addEventListener('click', () => {
+        quantity.value = parseInt(quantity.value) + 1;
+        updateCart(indexCart);
+    });
+
+    minusButton.addEventListener('click', () => {
+        if (parseInt(quantity.value) > 1) {
+            quantity.value = parseInt(quantity.value) - 1;
+            updateCart(indexCart);
+        }
+    });
+
+    select.addEventListener('change', () => {
+        updateCart(indexCart);
+    });
+
+    itemOptions.appendChild(favouriteButton);
+    itemOptions.appendChild(removeButton);
+    quantityInput.appendChild(minusButton);
+    quantityInput.appendChild(quantity);
+    quantityInput.appendChild(plusButton);
+    productOptions.appendChild(select);
+    productOptions.appendChild(quantityInput);
+    productDetails.appendChild(title);
+    productDetails.appendChild(price);
+    productDetails.appendChild(productOptions);
+    product.appendChild(img);
+    product.appendChild(productDetails);
+    item.appendChild(product);
+    item.appendChild(itemOptions);
+
+    document.querySelector('.cart').appendChild(item);
+}
+
+export function updateCart(indexBefore) {
+    var cart = JSON.parse(localStorage.getItem('cart'));
+    var old = cart[indexBefore];
+    cart.splice(indexBefore, 1);
+    old.size = document.querySelector(`#select-${indexBefore}`).value;
+    old.quantity = document.getElementById(`quantity-${indexBefore}`).value;
+    cart.splice(indexBefore, 0, old);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    window.location.reload();
+}
+
+export function removeCartItem(index) {
+    var cart = JSON.parse(localStorage.getItem('cart'));
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    window.location.reload();
 }

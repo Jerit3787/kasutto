@@ -230,6 +230,7 @@
 .cart .item .product-image {
     height: 139px;
     width: 139px;
+    object-fit: cover;
 }
 
 .cart .item .product-details {
@@ -299,6 +300,13 @@
     margin-right: 8px;
     color: black;
     opacity: 0.7;
+    cursor: pointer;
+}
+
+.cart .item .item-options .option-button:hover {
+    color: #0047FF;
+    font-weight: bold;
+    opacity: 1;
 }
 
 .cart .item .item-options .option-button i {
