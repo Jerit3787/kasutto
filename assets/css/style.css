@@ -752,6 +752,10 @@ p.no-margin {
     cursor: pointer;
 }
 
+.colour:hover {
+    border: 1px solid #D9D9D9;
+}
+
 .colour.active {
     border: 1px solid black;
 }

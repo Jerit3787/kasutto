@@ -30,6 +30,9 @@ function loadProduct(product) {
     var colorNum = getQueryParams('color') ? getQueryParams('color') : 0;
 
     product.colours.forEach(colour => {
+        var mainProduct = product;
+        var index = int;
+        console.log(mainProduct);
         var div = document.createElement('div');
         var img = document.createElement('img');
         var colourText = "";
@@ -46,15 +49,30 @@ function loadProduct(product) {
         img.setAttribute('src', colour.img);
         img.setAttribute('alt', colourText);
 
+        div.addEventListener('click', () => {
+            console.log(mainProduct.images[index]);
+            document.querySelector('.main-product').src = mainProduct.images[index][0];
+            document.querySelector('.colour.active').classList.remove('active');
+            div.classList.add('active');
+            loadProductImages(mainProduct, index);
+        });
+
         document.getElementById('colours').appendChild(div).appendChild(img);
         int++;
     });
 
-    document.querySelector('.main-product').src = product.images[colorNum][0];
+    loadProductImages(product, colorNum);
+
+    document.querySelector('#product-price').textContent = `RM ${product.price.toFixed(2)}`;
+}
+
+function loadProductImages(product, index) {
+    document.querySelector('.images').innerHTML = '';
+    document.querySelector('.main-product').src = product.images[index][0];
 
     var int = 0;
 
-    product.images[colorNum].forEach(image => {
+    product.images[index].forEach(image => {
         if (int < 8) {
             var div = document.createElement('div');
             var img = document.createElement('img');
@@ -67,8 +85,8 @@ function loadProduct(product) {
 
             div.addEventListener('click', () => {
                 document.querySelector('.main-product').src = image;
-                div.classList.add('active');
                 document.querySelector('.image-item.active').classList.remove('active');
+                div.classList.add('active');
             });
 
             document.querySelector('.images').appendChild(div).appendChild(img);
