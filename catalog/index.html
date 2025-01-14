@@ -20,8 +20,8 @@
             <a class="logo" href="/">KASUTTO.</a>
             <div class="links">
                 <a href="index.html">Home</a>
-                <a href="index_product.html">Store</a>
-                <a class="active">Catalog</a>
+                <a href="index.html">Store</a>
+                <a href="./" class="active">Catalog</a>
                 <a href="index.html">About Us</a>
             </div>
         </div>
@@ -44,44 +44,28 @@
                 <p class="text bold">Filter</p>
             </div>
             <div class="filters">
-                <div class="filter-item">
+                <div id="lifestyle" class="filter-item">
                     <p class="no-margin">Lifestyle</p>
                     <i class="material-symbols-outlined">chevron_right</i>
                 </div>
-                <div class="filter-item">
+                <div id="jordan" class="filter-item">
+                    <p class="no-margin">Jordan</p>
+                    <i class="material-symbols-outlined">chevron_right</i>
+                </div>
+                <div id="running" class="filter-item">
                     <p class="no-margin">Running</p>
                     <i class="material-symbols-outlined">chevron_right</i>
                 </div>
-                <div class="filter-item">
-                    <p class="no-margin">Basketball</p>
-                    <i class="material-symbols-outlined">chevron_right</i>
-                </div>
-                <div class="filter-item">
+                <div id="football" class="filter-item">
                     <p class="no-margin">Football</p>
                     <i class="material-symbols-outlined">chevron_right</i>
                 </div>
-                <div class="filter-item">
-                    <p class="no-margin">Training</p>
+                <div id="basketball" class="filter-item">
+                    <p class="no-margin">Basketball</p>
                     <i class="material-symbols-outlined">chevron_right</i>
                 </div>
-                <div class="filter-item">
-                    <p class="no-margin">Skateboarding</p>
-                    <i class="material-symbols-outlined">chevron_right</i>
-                </div>
-                <div class="filter-item">
-                    <p class="no-margin">Golf</p>
-                    <i class="material-symbols-outlined">chevron_right</i>
-                </div>
-                <div class="filter-item">
-                    <p class="no-margin">Tennis</p>
-                    <i class="material-symbols-outlined">chevron_right</i>
-                </div>
-                <div class="filter-item">
-                    <p class="no-margin">Athletics</p>
-                    <i class="material-symbols-outlined">chevron_right</i>
-                </div>
-                <div class="filter-item">
-                    <p class="no-margin">Walking</p>
+                <div id="gym-and-training" class="filter-item">
+                    <p class="no-margin">Gym and Training</p>
                     <i class="material-symbols-outlined">chevron_right</i>
                 </div>
             </div>
@@ -100,7 +84,7 @@
         </div>
         <div class="catalog">
             <div class="catalog-header">
-                <h2>Men's Shoes</h2>
+                <h2 id="page-title">Catalog</h2>
                 <select name="sort" title="sort" class="text black small">
                     <option value="data" selected disabled>Sort By</option>
                     <option value="data">Name</option>
@@ -108,82 +92,12 @@
                     <option value="data">Type</option>
                 </select>
             </div>
-            <div class="cards catalog">
-                <div class="card">
-                    <img src="1-1.png" alt="Product Image">
-                    <p class="text bold">Nike Pegasus Trail 4</p>
-                    <p class="text grey">Men's Running Shoes</p>
-                    <p class="text grey">3 Colours</p>
-                    <p class="text bold">RM 599.90</p>
-                </div>
-                <div class="card">
-                    <img src="3-1.png" alt="Product Image">
-                    <p class="text bold">Nike Vaporfly 5</p>
-                    <p class="text grey">Men's Road Running Shoes</p>
-                    <p class="text grey">6 Colours</p>
-                    <p class="text bold">RM 995.90</p>
-                </div>
-                <div class="card">
-                    <img src="4-1.png" alt="Product Image">
-                    <p class="text bold">Nike Pegasus 41</p>
-                    <p class="text grey">Men's Road Running Shoes</p>
-                    <p class="text grey">10 Colours</p>
-                    <p class="text bold">RM 609.90</p>
-                </div>
-                <div class="card">
-                    <img src="2-1.png" alt="Product Image">
-                    <p class="text bold">Nike Revolution 7 EasyOn</p>
-                    <p class="text grey">Men's Road Running Shoes</p>
-                    <p class="text grey">1 Colours</p>
-                    <p class="text bold">RM 235.90</p>
-                </div>
-                <div class="card">
-                    <img src="5-1.png" alt="Product Image">
-                    <p class="text bold">Nike Invincible 3</p>
-                    <p class="text grey">Men's Road Running Shoes</p>
-                    <p class="text grey">6 Colours</p>
-                    <p class="text bold">RM 799.90</p>
-                </div>
-                <div class="card">
-                    <img src="1-1.png" alt="Product Image">
-                    <p class="text bold">Nike Pegasus Trail 4</p>
-                    <p class="text grey">Men's Running Shoes</p>
-                    <p class="text grey">3 Colours</p>
-                    <p class="text bold">RM 599.90</p>
-                </div>
-                <div class="card">
-                    <img src="3-1.png" alt="Product Image">
-                    <p class="text bold">Nike Vaporfly 5</p>
-                    <p class="text grey">Men's Road Running Shoes</p>
-                    <p class="text grey">6 Colours</p>
-                    <p class="text bold">RM 995.90</p>
-                </div>
-                <div class="card">
-                    <img src="4-1.png" alt="Product Image">
-                    <p class="text bold">Nike Pegasus 41</p>
-                    <p class="text grey">Men's Road Running Shoes</p>
-                    <p class="text grey">10 Colours</p>
-                    <p class="text bold">RM 609.90</p>
-                </div>
-                <div class="card">
-                    <img src="2-1.png" alt="Product Image">
-                    <p class="text bold">Nike Revolution 7 EasyOn</p>
-                    <p class="text grey">Men's Road Running Shoes</p>
-                    <p class="text grey">1 Colours</p>
-                    <p class="text bold">RM 235.90</p>
-                </div>
-                <div class="card">
-                    <img src="5-1.png" alt="Product Image">
-                    <p class="text bold">Nike Invincible 3</p>
-                    <p class="text grey">Men's Road Running Shoes</p>
-                    <p class="text grey">6 Colours</p>
-                    <p class="text bold">RM 799.90</p>
-                </div>
+            <div id="catalog" class="cards catalog">
             </div>
         </div>
     </div>
 
-    <script src="script_catalog.js"></script>
+    <script src="../assets/js/catalog.js" type="module"></script>
 </body>
 
 </html>

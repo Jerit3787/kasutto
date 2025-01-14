@@ -1,49 +1,47 @@
-const API_PATH = `${window.location.origin}/api`
-
-async function getProducts() {
-    var jsonRAW = await fetch(`${API_PATH}/product/product.json`);
-    console.log(jsonRAW.json());
-    return JSON.parse(jsonRAW.json());
-}
-
-function createCard(titleStr, categoryStr, colorStr, priceStr, imgURL) {
-    var card = document.createElement('div');
-    var img = document.createElement('img');
-    var title = document.createElement('p');
-    var category = document.createElement('p');
-    var color = document.createElement('p');
-    var prices = document.createElement('p');
-
-    card.classList.add("card");
-    img.setAttribute("src", imgURL);
-    img.setAttribute("alt", titleStr);
-    title.classList.add("text bold");
-    category.classList.add("text grey");
-    color.classList.add("text grey");
-    prices.classList.add("text bold");
-
-    title.textContent = titleStr;
-    category.textContent = categoryStr;
-    color.textContent = colorStr;
-    prices.textContent = priceStr;
-    card.appendChild(img);
-    card.appendChild(title);
-    card.appendChild(category);
-    card.appendChild(color);
-    card.appendChild(prices);
-
-    var catalog = document.getElementById("catalog");
-    catalog.appendChild(card);
-}
+import { getProducts, createCard, getCategoryProducts } from './utility.js';
 
 function loadCatalog(products) {
     products.forEach(product => {
-        createCard(product.title,product.category, product.numOfColours, product.price, product.images[0][0]);
+        createCard(product);
     });
 }
 
-document.addEventListener('DOMContentLoaded', async function() {
-    var products = await getProducts();
-    console.log(products);
-    loadCatalog(products);
+function checkQueryParams() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams;
+}
+
+function addQueryParams(name, value) {
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set(name, value);
+    window.location.search = urlParams.toString();
+}
+
+function loadCategoryButtons() {
+    var buttons = document.querySelectorAll('.filter-item');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            var category = button.querySelector('p').textContent;
+            addQueryParams('category', category);
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    var queryParams = checkQueryParams();
+    var hasQueryParams = queryParams.size == 0 ? false : true;
+    if (hasQueryParams) {
+        var category = queryParams.get('category');
+        console.log(category.toLowerCase().replace(" ", "-"))
+        document.getElementById(category.toLowerCase().replace(" ", "-").replace(" ", "-")).classList.add('active');
+        document.getElementById('page-title').textContent = category;
+        getCategoryProducts(category).then((products) => {
+            loadCatalog(products);
+        });
+    } else {
+        getProducts().then((products) => {
+            loadCatalog(products);
+        })
+    }
+    loadCategoryButtons();
 })

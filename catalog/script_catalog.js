@@ -1,48 +1,7 @@
 // script_catalog.js
 
 // Initialize product data
-const products = [
-    {
-        name: "Nike Pegasus Trail 4",
-        type: "Running",
-        description: "Men's Running Shoes",
-        colors: 3,
-        price: 599.90,
-        image: "1-1.png",
-    },
-    {
-        name: "Nike Vaporfly 5",
-        type: "Running",
-        description: "Men's Road Running Shoes",
-        colors: 6,
-        price: 995.90,
-        image: "3-1.png",
-    },
-    {
-        name: "Nike Pegasus 41",
-        type: "Running",
-        description: "Men's Road Running Shoes",
-        colors: 10,
-        price: 609.90,
-        image: "4-1.png",
-    },
-    {
-        name: "Nike Revolution 7 EasyOn",
-        type: "Running",
-        description: "Men's Road Running Shoes",
-        colors: 1,
-        price: 235.90,
-        image: "2-1.png",
-    },
-    {
-        name: "Nike Invincible 3",
-        type: "Running",
-        description: "Men's Road Running Shoes",
-        colors: 6,
-        price: 799.90,
-        image: "5-1.png",
-    },
-];
+
 
 // Reference DOM elements
 const catalog = document.querySelector(".cards.catalog");

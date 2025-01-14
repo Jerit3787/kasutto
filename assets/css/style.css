@@ -415,7 +415,17 @@ select {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    margin: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dashboard .filter .filters .filter-item.active {
+    font-weight: bold;
+    background-color: #c5c4c4;
+}
+
+.dashboard .filter .filters .filter-item:hover {
+    background-color: #c5c4c4;
 }
 
 .dashboard .filter .filter-dropdown {

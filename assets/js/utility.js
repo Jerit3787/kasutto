@@ -1,4 +1,6 @@
-const API_PATH = "${window.location.origin}/api";
+const API_PATH = `${window.location.origin}/api`;
+const TEXT_BOLD = "text bold";
+const TEXT_GREY = "text grey";
 
 export function fetchJSON(jsonFilePath) {
     return new Promise((resolve, reject) => {
@@ -15,7 +17,7 @@ export function fetchJSON(jsonFilePath) {
     })
 }
 
-export function createCard(titleStr, categoryStr, colorStr, priceStr, imgURL) {
+export function createCard(product) {
     var card = document.createElement('div');
     var img = document.createElement('img');
     var title = document.createElement('p');
@@ -24,17 +26,17 @@ export function createCard(titleStr, categoryStr, colorStr, priceStr, imgURL) {
     var prices = document.createElement('p');
 
     card.classList.add("card");
-    img.setAttribute("src", imgURL);
-    img.setAttribute("alt", titleStr);
-    title.classList.add("text bold");
-    category.classList.add("text grey");
-    color.classList.add("text grey");
-    prices.classList.add("text bold");
+    img.setAttribute("src", product.images[0][0]);
+    img.setAttribute("alt", product.title);
+    title.setAttribute("class", TEXT_BOLD);
+    category.setAttribute("class", TEXT_GREY);
+    color.setAttribute("class", TEXT_GREY);
+    prices.setAttribute("class", TEXT_BOLD);
 
-    title.textContent = titleStr;
-    category.textContent = categoryStr;
-    color.textContent = colorStr;
-    prices.textContent = priceStr;
+    title.textContent = product.title;
+    category.textContent = `${product.category} Shoes`;
+    color.textContent = `${product.numOfColours} Colours`;
+    prices.textContent = `RM ${product.price.toFixed(2)}`;
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(category);
@@ -45,7 +47,7 @@ export function createCard(titleStr, categoryStr, colorStr, priceStr, imgURL) {
     catalog.appendChild(card);
 }
 
-function getProducts() {
+export function getProducts() {
     return new Promise((resolve, reject) => {
         fetchJSON(`${API_PATH}/product/product.json`)
             .then(jsonData => {
@@ -56,4 +58,12 @@ function getProducts() {
                 reject(error);
             })
     });
+}
+
+export function getCategoryProducts(category) {
+    return new Promise((resolve, reject) => {
+        getProducts().then((products) => {
+            resolve(products.filter(product => product.category === category));
+        });
+    })
 }
