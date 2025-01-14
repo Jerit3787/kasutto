@@ -559,6 +559,34 @@ p.no-margin {
     height: 16px;
 }
 
+#price-filter label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#price-filter input[type="range"] {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#price-min-value,
+#price-max-value {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+#price-filter {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+}
+
 #sizes {
     flex-flow: row wrap;
     row-gap: 8px;

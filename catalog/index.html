@@ -73,6 +73,21 @@
                 <p class="no-margin">Price</p>
                 <i class="material-symbols-outlined">keyboard_arrow_down</i>
             </div>
+            <div>
+                <div id="price-filter" class="grid-column two gap-row">
+                    <div class="column" style="margin: 0;">
+                        <p class="no-margin text grey" style="font-size: 12px">Min Price</p>
+                        <p id="price-min-value" class="no-margin">RM 999</p>
+                    </div>
+                    <input type="range" id="price-min" name="price-min" min="0" max="1000" value="0" step="10" style="margin: auto 0;">
+                    <div class="column" style="margin: 0;">
+                        <p class="no-margin text grey" style="font-size: 12px">Max Price</p>
+                        <p id="price-max-value" class="no-margin">RM 999</p>
+                    </div>
+                    <input type="range" id="price-max" name="price-max" min="0" max="1500" value="1500" step="10">
+                    <a class="button secondary" id="price-filter-button">Apply</a>
+                </div>
+            </div>
             <div class="filter-dropdown">
                 <p class="no-margin">Size</p>
                 <i class="material-symbols-outlined">keyboard_arrow_down</i>
@@ -84,6 +99,10 @@
             <div class="filter-dropdown">
                 <p class="no-margin">Colour</p>
                 <i class="material-symbols-outlined">keyboard_arrow_down</i>
+            </div>
+            <div>
+                <div id="colour-filter" class="grid-column two">
+                </div>
             </div>
         </div>
         <div class="catalog">
