@@ -1,6 +1,22 @@
 // script_complete.js
 
 document.addEventListener("DOMContentLoaded", () => {
+
+        // Select all buttons in the shipping method section
+    const shippingButtons = document.querySelectorAll('.form-button.fixed');
+
+    // Add a click event listener to each button
+    shippingButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove 'active' class from all buttons
+            shippingButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add 'active' class to the clicked button
+            button.classList.add('active');
+        });
+    });
+
+
     // Handle progress indicator
     const progressIndicators = document.querySelectorAll(".progress-indicator");
     const progressLines = document.querySelectorAll(".progress-line");
