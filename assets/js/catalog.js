@@ -36,16 +36,22 @@ function loadSizes(sizes) {
 document.addEventListener('DOMContentLoaded', async () => {
     var category = getQueryParams('category');
     var size = getQueryParams('size');
-    var hasQueryParams = !category ? false : true;
+    const searchParams = new URLSearchParams(window.location.search);
+    var hasQueryParams = searchParams.size === 0 ? false : true;
     var products = await getProducts();
     if (hasQueryParams) {
         document.getElementById(category.toLowerCase().replace(" ", "-").replace(" ", "-")).classList.add('active');
         document.getElementById('page-title').textContent = category;
-        products = await filterProducts(products);
         var sizes = compileAvailableSizes(products).sort();
         loadSizes(sizes);
+        products = await filterProducts(products, searchParams);
         loadProducts(products);
-        document.getElementById(size).classList.add('active');
+        try {
+            console.log("Test")
+            document.getElementById(size).classList.add('active');
+        } catch (error) {
+            console.log('Invalid size query parameter:', size);
+        }
     } else {
         loadProducts(products);
         var sizes = compileAvailableSizes(products).sort();
@@ -54,9 +60,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadCategoryButtons();
 })
 
-function filterProducts(products) {
+function filterProducts(products, searchParams) {
     return new Promise(async (resolve, reject) => {
-        const searchParams = new URLSearchParams(window.location.search);
         for (const [key, value] of searchParams.entries()) {
             switch (key) {
                 case 'category':
