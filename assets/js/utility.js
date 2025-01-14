@@ -372,3 +372,39 @@ export function createCheckoutCard(productItem, indexImg, sizeGiven, quantityVal
 
     document.querySelector('.cart').appendChild(cartItem);
 }
+
+export function createPaymentCard(productItem, indexImg, sizeGiven, quantityValue, indexCart) {
+    var item = document.createElement('div');
+    var product = document.createElement('div');
+    var img = document.createElement('img');
+    var productDetails = document.createElement('div');
+    var title = document.createElement('p');
+    var size = document.createElement('p');
+    var quantity = document.createElement('p');
+    var price = document.createElement('p');
+
+    item.setAttribute('class', 'item');
+    product.setAttribute('class', 'product');
+    img.setAttribute('src', productItem.images[indexImg][0]);
+    img.setAttribute('alt', productItem.title);
+    img.setAttribute('class', 'product-image');
+    productDetails.setAttribute('class', 'product-details');
+    title.textContent = `${productItem.title} - ${productItem.category} Shoes`;
+    title.setAttribute('class', TEXT_BOLD);
+    size.textContent = `Size ${sizeGiven}`;
+    size.setAttribute('class', TEXT_GREY);
+    quantity.textContent = `x${quantityValue}`;
+    quantity.setAttribute('class', 'product-quantity');
+    price.textContent = `RM ${productItem.price.toFixed(2)}`;
+    price.setAttribute('class', TEXT_BOLD);
+
+    productDetails.appendChild(title);
+    productDetails.appendChild(size);
+    productDetails.appendChild(quantity);
+    productDetails.appendChild(price);
+    product.appendChild(img);
+    product.appendChild(productDetails);
+    item.appendChild(product);
+
+    document.querySelector('.cart').appendChild(item);
+}
