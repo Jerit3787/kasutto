@@ -42,26 +42,6 @@
         <div class="left">
             <h2>Summary Order</h2>
             <div class="cart">
-                <div class="item">
-                    <div class="product">
-                        <img class="product-image" src="/api/product-image/1-1-1.png" alt="Product Image">
-                        <div class="product-details">
-                            <p class="text bold">Nike Pegasus Trail 4 - Men's Running Shoes</p>
-                            <p class="text grey">Size UK 5</p>
-                            <p class="text bold">RM 599.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product">
-                        <img class="product-image" src="/api/product-image/2-1.png" alt="Product Image">
-                        <div class="product-details">
-                            <p class="text bold">Nike Revolution 7 EasyOn - Men's Road Running Shoes</p>
-                            <p class="text grey">Size UK 5</p>
-                            <p class="text bold">RM 599.00</p>
-                        </div>
-                    </div>
-                </div>
             </div>
             <h5>Available Shipping Method <i class="material-symbols-outlined icon information">info</i></h5>
             <div class="cart">
@@ -98,48 +78,50 @@
                         </span>
                     </div>
                 </div>
-                <div class="form-item">
-                    <p class="form-text">Email Address<span class="required">*</span></p>
-                    <div class="form-option outlined">
-                        <i class="material-symbols-outlined">alternate_email</i>
-                        <input type="email" placeholder="Enter email address">
-                    </div>
-                </div>
-                <div class="form-item">
-                    <p class="form-text">Card Number<span class="required">*</span></p>
-                    <div class="form-option outlined">
-                        <i class="material-symbols-outlined">credit_card</i>
-                        <input type="text" placeholder="Enter card number">
-                    </div>
-                </div>
-                <div class="column two">
+                <div id="form-credit-card">
                     <div class="form-item">
-                        <p class="form-text">Card Expiry Date<span class="required">*</span></p>
+                        <p class="form-text">Email Address<span class="required">*</span></p>
                         <div class="form-option outlined">
-                            <i class="material-symbols-outlined">calendar_month</i>
-                            <input type="text" placeholder="MM/YY">
+                            <i class="material-symbols-outlined">alternate_email</i>
+                            <input id="email" type="email" placeholder="Enter email address">
                         </div>
                     </div>
                     <div class="form-item">
-                        <p class="form-text">CVC/CCV<span class="required">*</span></p>
+                        <p class="form-text">Card Number<span class="required">*</span></p>
                         <div class="form-option outlined">
-                            <i class="material-symbols-outlined">credit_card_gear</i>
-                            <input type="text" placeholder="CVC/CCV">
+                            <i class="material-symbols-outlined">credit_card</i>
+                            <input id="card-number" type="text" placeholder="Enter card number">
                         </div>
                     </div>
-                </div>
-                <div class="form-item">
-                    <p class="form-text">Card Holder Name<span class="required">*</span></p>
-                    <div class="form-option outlined">
-                        <i class="material-symbols-outlined">person</i>
-                        <input type="text" placeholder="Enter card holder name">
+                    <div class="grid-column two">
+                        <div class="form-item">
+                            <p class="form-text">Card Expiry Date<span class="required">*</span></p>
+                            <div class="form-option outlined">
+                                <i class="material-symbols-outlined">calendar_month</i>
+                                <input id="card-expiry" type="text" placeholder="MM/YY">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <p class="form-text">CVC/CCV<span class="required">*</span></p>
+                            <div class="form-option outlined">
+                                <i class="material-symbols-outlined">credit_card_gear</i>
+                                <input id="card-secret" type="text" placeholder="CVC/CCV">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="form-item">
-                    <p class="form-text">Billing Address<span class="required">*</span></p>
-                    <div class="form-option outlined">
-                        <i class="material-symbols-outlined">home</i>
-                        <input type="text" placeholder="Enter billing address">
+                    <div class="form-item">
+                        <p class="form-text">Card Holder Name<span class="required">*</span></p>
+                        <div class="form-option outlined">
+                            <i class="material-symbols-outlined">person</i>
+                            <input id="card-name" type="text" placeholder="Enter card holder name">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <p class="form-text">Billing Address<span class="required">*</span></p>
+                        <div class="form-option outlined">
+                            <i class="material-symbols-outlined">home</i>
+                            <input id="billing-address" type="text" placeholder="Enter billing address">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,7 +135,7 @@
             </div>
             <div class="summary-item">
                 <p class="text grey">Discount</p>
-                <p class="text bold">-RM 0.00</p>
+                <p id="discount" class="text bold">-RM 0.00</p>
             </div>
             <div class="summary-item">
                 <p class="text bold grey">Total (inclusive 8% SST)</p>

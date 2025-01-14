@@ -7,13 +7,44 @@ document.addEventListener('DOMContentLoaded', () => {
 async function loadCart() {
     var cart = JSON.parse(localStorage.getItem('cart'));
     console.log(cart);
-
+    loadData();
     createCart(cart)
 }
 
-function updateTotal(total) {
-    document.getElementById('total').textContent = `RM ${total.toFixed(2)}`;
-    document.getElementById('subtotal').textContent = `RM ${total.toFixed(2)}`;
+function loadData() {
+    var total = JSON.parse(localStorage.getItem('total-information'));
+    var personal = JSON.parse(localStorage.getItem('personal-information'));
+    var payment = JSON.parse(localStorage.getItem('payment-information'));
+
+
+    document.getElementById('subtotal').textContent = total.subtotal;
+    document.getElementById('discount').textContent = total.discount;
+    document.getElementById('total').textContent = total.total;
+    document.getElementById('email').innerHTML = `We've sent a confirmation email to <b>${personal.email}</b>`;
+    document.getElementById('address').innerHTML = `Shipping Address<br>${personal.name}<br>${personal.address}<br>${personal.postcode}, ${personal.city}, ${personal.state},<br>${personal.country}`;
+    document.getElementById('payment-method').innerHTML = `<b>${payment.paymentType}</b>`;
+
+    createDeliveryDate();
+    createOrderNumber();
+    createTrackingNumber();
+}
+
+function createDeliveryDate() {
+    var date = new Date();
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    date.setDate(date.getDate() + 7);
+    document.getElementById('delivery-date').textContent = `Expected Delivery: ${date.toLocaleDateString("en-US", options)}`;
+}
+
+function createOrderNumber() {
+    var date = new Date();
+    var orderNumber = Math.floor(Math.random() * 1000000000);
+    document.getElementById('order-number').innerHTML = `Your order number is <b>x${orderNumber}</b>`;
+}
+
+function createTrackingNumber() {
+    var trackingNumber = Math.floor(Math.random() * 1000000000);
+    document.getElementById('tracking-number').innerHTML = `Tracking Number: MY${trackingNumber}`;
 }
 
 function createCart(cart) {

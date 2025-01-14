@@ -59,20 +59,20 @@
                     <p class="form-text">Full Name<span class="required">*</span></p>
                     <div class="form-option outlined">
                         <i class="material-symbols-outlined">person</i>
-                        <input type="text" placeholder="Enter full name">
+                        <input id="name" type="text" placeholder="Enter full name">
                     </div>
                 </div>
                 <div class="form-item">
                     <p class="form-text">Email Address<span class="required">*</span></p>
                     <div class="form-option outlined">
                         <i class="material-symbols-outlined">alternate_email</i>
-                        <input type="email" placeholder="Enter email address">
+                        <input id="email" type="email" placeholder="Enter email address">
                     </div>
                 </div>
                 <div class="form-item">
                     <p class="form-text">Phone Number<span class="required">*</span></p>
                     <div class="form-option outlined">
-                        <select class="form-option small text hover" name="country-code" title="country-code">
+                        <select id="country-code" class="form-option small text hover" name="country-code" title="country-code">
                             <option value="+60">🇲🇾</option>
                             <option value="+1">🇺🇸</option>
                             <option value="+44">🇬🇧</option>
@@ -81,40 +81,40 @@
                             <option value="+86">🇨🇳</option>
                             <option value="+91">🇮🇳</option>
                         </select>
-                        <input type="text" placeholder="Enter phone number">
+                        <input id="phone-number" type="text" placeholder="Enter phone number">
                     </div>
                 </div>
                 <div class="form-item">
                     <p class="form-text">Delivery Address<span class="required">*</span></p>
                     <div class="form-option outlined">
                         <i class="material-symbols-outlined">home</i>
-                        <input type="email" placeholder="Enter delivery address">
+                        <input id="address" type="text" placeholder="Enter delivery address">
                     </div>
                 </div>
                 <div class="column three">
                     <div class="form-item">
                         <p class="form-text">City<span class="required">*</span></p>
                         <div class="form-option outlined">
-                            <input type="email" placeholder="Enter city">
+                            <input id="city" type="text" placeholder="Enter city">
                         </div>
                     </div>
                     <div class="form-item">
                         <p class="form-text">State<span class="required">*</span></p>
                         <div class="form-option outlined">
-                            <input type="email" placeholder="Enter state">
+                            <input id="state" type="text" placeholder="Enter state">
                         </div>
                     </div>
                     <div class="form-item">
                         <p class="form-text">Postcode<span class="required">*</span></p>
                         <div class="form-option outlined">
-                            <input type="email" placeholder="Enter postcode">
+                            <input id="postcode" type="text" placeholder="Enter postcode">
                         </div>
                     </div>
                 </div>
                 <div class="form-item">
                     <p class="form-text">Country<span class="required">*</span></p>
                     <div class="form-option outlined">
-                        <select class="text hover" name="country" title="country">
+                        <select id="country" class="text hover" name="country" title="country">
                                 <option value="Malaysia">Malaysia</option>
                                 <option value="United States">United States</option>
                                 <option value="United Kingdom">United Kingdom</option>
@@ -169,7 +169,7 @@
                 <p id="total" class="text bold">RM 835.80</p>
             </div>
             <div class="checkout">
-                <a href="../checkout/payment/" class="button primary">Pay Now</a>
+                <a id="pay-now" class="button primary">Pay Now</a>
             </div>
             <span class="flex center-x text bold"><i class="material-symbols-outlined text blue margin-right">lock</i>Secure Checkout - SSL Encrypted</span>
             <p class="text grey">Ensuring your financial and personal details are secure during every transaction</p>

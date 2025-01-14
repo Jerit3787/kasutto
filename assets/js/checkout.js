@@ -33,6 +33,28 @@ function updateTotal(total) {
     document.getElementById('subtotal').textContent = `RM ${total.toFixed(2)}`;
 }
 
+function saveData() {
+    var data = {
+        "name": document.getElementById('name').value,
+        "email": document.getElementById('email').value,
+        "phone": `${document.getElementById('country-code').value}${document.getElementById('phone-number').value}`,
+        "address": document.getElementById('address').value,
+        "city": document.getElementById('city').value,
+        "state": document.getElementById('state').value,
+        "postcode": document.getElementById('postcode').value,
+        "country": document.getElementById('country').value
+    }
+    localStorage.setItem('personal-information', JSON.stringify(data));
+
+    var payment = {
+        "subtotal": document.getElementById('subtotal').textContent,
+        "discount": document.getElementById('discount').textContent,
+        "total": document.getElementById('total').textContent
+    }
+
+    localStorage.setItem('total-information', JSON.stringify(payment));
+}
+
 function formFunction() {
     // Select all buttons in the shipping method section
     const shippingButtons = document.querySelectorAll('.form-button.fixed');
@@ -51,8 +73,9 @@ function formFunction() {
     // Handle form validations
     const form = document.querySelector(".form");
     const requiredFields = form.querySelectorAll("input[placeholder][type='text'], input[placeholder][type='email']");
+    const paynowButton = document.querySelector("#pay-now");
 
-    form.addEventListener("submit", (e) => {
+    paynowButton.addEventListener("click", (e) => {
         let valid = true;
         requiredFields.forEach((field) => {
             if (!field.value.trim()) {
@@ -65,6 +88,9 @@ function formFunction() {
         if (!valid) {
             e.preventDefault();
             alert("Please fill in all required fields.");
+        } else {
+            saveData();
+            window.location.href = "./payment/"
         }
     });
 
