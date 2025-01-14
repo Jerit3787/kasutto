@@ -31,6 +31,10 @@ function loadSizes(sizes) {
 
         document.getElementById('size-filter').appendChild(div).appendChild(p);
     });
+    var button = document.getElementById('size-button')
+    button.addEventListener('click', () => {
+        toggleFilter('size-filter', button);
+    });
 }
 
 function loadColours(colours) {
@@ -54,6 +58,10 @@ function loadColours(colours) {
 
         document.getElementById('colour-filter').appendChild(div).appendChild(p);
     });
+    var button = document.getElementById('colour-button')
+    button.addEventListener('click', () => {
+        toggleFilter('colour-filter', button);
+    });
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -71,11 +79,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (searchParams.has('size')) {
             var size = getQueryParams('size');
             document.getElementById(size).classList.add('active');
+            toggleFilter('size-filter', document.getElementById('size-button'));
         }
         if (searchParams.has('colour')) {
             var colour = getQueryParams('colour');
             document.getElementById(colour).classList.add('active');
             var productsWithColours = await getProductsByColourWithIndex(products, colour);
+            toggleFilter('colour-filter', document.getElementById('colour-button'));
         }
         if (searchParams.has('price-min')) {
             var priceMin = getQueryParams('price-min');
@@ -84,6 +94,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (searchParams.has('price-max')) {
             var priceMax = getQueryParams('price-max');
             updatePriceMaxValue(priceMax);
+        }
+        if ((searchParams.has('price-min') && searchParams.has('price-max')) || (searchParams.has('price-min') && !searchParams.has('price-max'))) {
+            toggleFilter('price-filter', document.getElementById('price-button'));
         }
         if (searchParams.has('sort')) {
             var sortType = getQueryParams('sort');
@@ -109,6 +122,22 @@ function loadForms(products) {
     loadColours(colours);
     loadPriceRangeSliders();
     loadSort();
+    document.getElementById('clear-filters').addEventListener('click', () => {
+        window.location.search = '';
+    });
+}
+
+function toggleFilter(filterId, parent) {
+    const filterContent = document.getElementById(filterId);
+    if (filterContent.style.display === "none" || filterContent.style.display === "") {
+        filterContent.style.display = "grid";
+        parent.style.margin = "8px 0px";
+        parent.querySelector('i').textContent = 'keyboard_arrow_up';
+    } else {
+        filterContent.style.display = "none";
+        parent.style.margin = "0";
+        parent.querySelector('i').textContent = 'keyboard_arrow_down';
+    }
 }
 
 function loadSort() {
@@ -186,6 +215,11 @@ function loadPriceRangeSliders() {
     var applyButton = document.getElementById('price-filter-button');
     applyButton.addEventListener('click', () => {
         addQueryParams([{ "name": 'price-min', "value": priceMinRange.value }, { "name": 'price-max', "value": priceMaxRange.value }]);
+    });
+
+    var button = document.getElementById('price-button')
+    button.addEventListener('click', () => {
+        toggleFilter('price-filter', button);
     });
 }
 

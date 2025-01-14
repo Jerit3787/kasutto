@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart | Kasutto</title>
+    <title>Catalog | Kasutto</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +69,7 @@
                     <i class="material-symbols-outlined">chevron_right</i>
                 </div>
             </div>
-            <div class="filter-dropdown">
+            <div id="price-button" class="filter-dropdown">
                 <p class="no-margin">Price</p>
                 <i class="material-symbols-outlined">keyboard_arrow_down</i>
             </div>
@@ -88,7 +88,7 @@
                     <a class="button secondary" id="price-filter-button">Apply</a>
                 </div>
             </div>
-            <div class="filter-dropdown">
+            <div id="size-button" class="filter-dropdown">
                 <p class="no-margin">Size</p>
                 <i class="material-symbols-outlined">keyboard_arrow_down</i>
             </div>
@@ -96,7 +96,7 @@
                 <div id="size-filter" class="grid-column two gap-row">
                 </div>
             </div>
-            <div class="filter-dropdown">
+            <div id="colour-button" class="filter-dropdown">
                 <p class="no-margin">Colour</p>
                 <i class="material-symbols-outlined">keyboard_arrow_down</i>
             </div>
@@ -104,6 +104,7 @@
                 <div id="colour-filter" class="grid-column two gap-row">
                 </div>
             </div>
+            <a class="button secondary" id="clear-filters" style="margin:0; margin-top: 8px;">Clear Filters</a>
         </div>
         <div class="catalog">
             <div class="catalog-header">

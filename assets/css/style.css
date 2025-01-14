@@ -580,8 +580,8 @@ p.no-margin {
 }
 
 .filter-dropdown {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 0;
+    cursor: pointer;
 }
 
 #price-filter {
@@ -606,6 +606,12 @@ p.no-margin {
     margin-right: 8px;
     padding: 0px 8px;
     cursor: pointer;
+}
+
+#colour-filter,
+#size-filter,
+#price-filter {
+    display: none;
 }
 
 #colour-filter .size,
