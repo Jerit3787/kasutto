@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById(category.toLowerCase().replace(" ", "-").replace(" ", "-")).classList.add('active');
         document.getElementById('page-title').textContent = category;
         getCategoryProducts(category).then((products) => {
-            loadCatalog(products);
+            loadProducts(products);
         });
     } else {
         getProducts().then((products) => {

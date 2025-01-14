@@ -56,13 +56,7 @@
                 <h1 id="category"></h1>
             </div>
             <div class="row">
-                <div class="row">
-                    <i id="star" class="material-symbols-outlined filled text yellow">star</i>
-                    <i class="material-symbols-outlined filled text yellow">star</i>
-                    <i class="material-symbols-outlined filled text yellow">star</i>
-                    <i class="material-symbols-outlined filled text yellow">star</i>
-                    <i class="material-symbols-outlined text yellow">star_HALF</i>
-                    <p id="rating-text" class="text icon after no-margin"></p>
+                <div id="star-container" class="row">
                 </div>
                 <div class="row margin-left-2 text hover">
                     <i class="material-symbols-outlined text icon before">comment</i>
@@ -86,9 +80,51 @@
                 <a class="button primary"><i class="material-symbols-outlined">shopping_cart</i>Add to cart</a>
                 <a id="product-price" class="button secondary text bold no-hover"></a>
             </div>
+            <div class="line divider"></div>
+            <div class="grid-column two gap-row">
+                <div class="row">
+                    <div class="icon circle">
+                        <i class="material-symbols-outlined">local_shipping</i>
+                    </div>
+                    <p class="text icon after" style="font-size: 18px">Secure Payment</p>
+                </div>
+                <div class="row">
+                    <div class="icon circle">
+                        <i class="material-symbols-outlined">local_shipping</i>
+                    </div>
+                    <p class="text icon after" style="font-size: 18px">1-week free returns</p>
+                </div>
+                <div class="row">
+                    <div class="icon circle">
+                        <i class="material-symbols-outlined">local_shipping</i>
+                    </div>
+                    <div class="text after icon">
+                        <p class="no-margin" style="font-size: 18px; margin-bottom: 8px;">Free shipping</p>
+                        <p class="no-margin" style="font-size: 14px">across Malaysia*</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="icon circle">
+                        <i class="material-symbols-outlined">local_shipping</i>
+                    </div>
+                    <div class="text after icon">
+                        <p class="no-margin" style="font-size: 18px; margin-bottom: 8px;">Easy installments plan</p>
+                        <p class="no-margin" style="font-size: 14px">with 0% interest rate**</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
+    <div class="line divider" style="margin-top: 24px;"></div>
+    <div class="dashboard with-margin single">
+        <h2>Product Description</h2>
+        <div class="grid-column three" style="width:480px;margin-top: 24px;">
+            <a class="text bold">Introduction</a>
+            <a>User comments</a>
+            <a>Question & Answer</a>
+        </div>
+        <p id="description" class="text" style="margin-top: 24px;"></p>
+    </div>
     <script src="../assets/js/product.js" type="module">
     </script>
 </body>

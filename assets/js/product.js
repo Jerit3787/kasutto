@@ -12,7 +12,6 @@ function loadProduct(product) {
     document.getElementById('directory-category').textContent = `${product.category} Shoes`;
     document.getElementById('title').textContent = product.title;
     document.getElementById('category').textContent = `${product.category} Shoes`;
-    document.getElementById('rating-text').textContent = product.rating.toFixed(1);
     document.getElementById('comment-text').textContent = `${product.numOfComment} comments`;
     product.sizes.forEach(size => {
         var div = document.createElement('div');
@@ -26,12 +25,10 @@ function loadProduct(product) {
 
     console.log(product.colours);
 
-    var int = 0;
     var colorNum = getQueryParams('color') ? getQueryParams('color') : 0;
 
-    product.colours.forEach(colour => {
+    product.colours.forEach((colour, index) => {
         var mainProduct = product;
-        var index = int;
         console.log(mainProduct);
         var div = document.createElement('div');
         var img = document.createElement('img');
@@ -41,7 +38,7 @@ function loadProduct(product) {
             colourText += "/" + color;
         });
 
-        if (int === parseInt(colorNum)) {
+        if (index === parseInt(colorNum)) {
             div.setAttribute('class', 'colour active');
         } else {
             div.setAttribute('class', 'colour');
@@ -58,10 +55,13 @@ function loadProduct(product) {
         });
 
         document.getElementById('colours').appendChild(div).appendChild(img);
-        int++;
     });
 
+    document.getElementById('description').textContent = product.description;
+
     loadProductImages(product, colorNum);
+
+    updateStarRating(product.rating);
 
     document.querySelector('#product-price').textContent = `RM ${product.price.toFixed(2)}`;
 }
@@ -70,9 +70,7 @@ function loadProductImages(product, index) {
     document.querySelector('.images').innerHTML = '';
     document.querySelector('.main-product').src = product.images[index][0];
 
-    var int = 0;
-
-    product.images[index].forEach(image => {
+    product.images[index].forEach((image, int) => {
         if (int < 8) {
             var div = document.createElement('div');
             var img = document.createElement('img');
@@ -90,7 +88,34 @@ function loadProductImages(product, index) {
             });
 
             document.querySelector('.images').appendChild(div).appendChild(img);
-            int++;
         }
     });
+}
+
+function updateStarRating(rating) {
+    const starContainer = document.getElementById('star-container');
+    const ratingText = document.createElement('p');
+    starContainer.innerHTML = ''; // Clear existing stars
+
+    for (let i = 0; i < 5; i++) {
+        const star = document.createElement('i');
+
+        if (i < Math.floor(rating)) {
+            star.textContent = 'star';
+            star.classList.add('material-symbols-outlined', 'filled', 'text', 'yellow');
+        } else if (i < rating) {
+            star.textContent = 'star_half';
+            star.classList.add('material-symbols-outlined', 'text', 'yellow');
+        } else {
+            star.textContent = 'star_outline';
+            star.classList.add('material-symbols-outlined', 'text', 'yellow');
+        }
+
+        starContainer.appendChild(star);
+    }
+
+    // Set the rating text
+    ratingText.textContent = rating.toFixed(1);
+    ratingText.setAttribute('class', 'text icon after no-margin');
+    starContainer.appendChild(ratingText);
 }
