@@ -1,10 +1,4 @@
-import { getProducts, createCard, getCategoryProducts, getQueryParams, addQueryParams } from './utility.js';
-
-function loadCatalog(products) {
-    products.forEach(product => {
-        createCard(product);
-    });
-}
+import { getProducts, createCard, getCategoryProducts, getQueryParams, addQueryParams, loadProducts } from './utility.js';
 
 function loadCategoryButtons() {
     var buttons = document.querySelectorAll('.filter-item');
@@ -28,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     } else {
         getProducts().then((products) => {
-            loadCatalog(products);
+            loadProducts(products);
         })
     }
     loadCategoryButtons();

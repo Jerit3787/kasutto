@@ -65,6 +65,12 @@ function loadProduct(product) {
             }
             img.setAttribute('src', image);
 
+            div.addEventListener('click', () => {
+                document.querySelector('.main-product').src = image;
+                div.classList.add('active');
+                document.querySelector('.image-item.active').classList.remove('active');
+            });
+
             document.querySelector('.images').appendChild(div).appendChild(img);
             int++;
         }

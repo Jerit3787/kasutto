@@ -90,3 +90,13 @@ export function addQueryParams(name, value) {
     urlParams.set(name, value);
     window.location.search = urlParams.toString();
 }
+
+export function loadProducts(products) {
+    products.forEach(product => {
+        createCard(product);
+    });
+}
+
+export function sortByRating(products) {
+    return products.sort((a, b) => b.rating - a.rating);
+}

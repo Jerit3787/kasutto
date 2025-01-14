@@ -711,6 +711,12 @@ p.no-margin {
     padding: 8px;
     width: 68px;
     height: 68px;
+    cursor: pointer;
+}
+
+.images .image-item:hover {
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
 }
 
 .images .image-item.active {
