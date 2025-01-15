@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us| Kasutto</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!--Import Google - Nokora Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="left">
+            <a class="logo" href="../">KASUTTO.</a>
+            <div class="links">
+                <a class="active" href="../">Home</a>
+                <a href="../catalog/">Store</a>
+                <a href="../catalog/">Catalog</a>
+                <a href="./">Contact Us</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="search-box">
+                <i class="material-symbols-outlined">search</i>
+                <input type="text" placeholder="Search">
+            </div>
+            <a class="nav-button" href="../account/">
+                <i class="material-symbols-outlined">account_circle</i>
+            </a>
+            <a class="nav-button" href="../cart/">
+                <i class="material-symbols-outlined">shopping_cart</i>
+            </a>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="left">
+            <h2>Contact Us</h2>
+            <div class="form">
+                <div class="form-item">
+                    <p class="form-text">Full Name<span class="required">*</span></p>
+                    <div class="form-option outlined">
+                        <i class="material-symbols-outlined">person</i>
+                        <input id="name" type="text" placeholder="Enter full name">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p class="form-text">Email Address<span class="required">*</span></p>
+                    <div class="form-option outlined">
+                        <i class="material-symbols-outlined">alternate_email</i>
+                        <input id="email" type="email" placeholder="Enter email address">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p class="form-text">Subject<span class="required">*</span></p>
+                    <div class="form-option outlined">
+                        <i class="material-symbols-outlined">subject</i>
+                        <input id="subject" type="text" placeholder="Enter subject">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p class="form-text">Details<span class="required">*</span></p>
+                    <div class="form-option outlined">
+                        <i class="material-symbols-outlined">description</i>
+                        <input id="details" type="text" placeholder="Enter details">
+                    </div>
+                </div>
+                <a id="send-button" class="button primary"><i class="material-symbols-outlined">send</i>Send</a>
+            </div>
+        </div>
+        <div class="right">
+        </div>
+    </div>
+
+    <script src="../assets/js/contact-us.js" type="module"></script>
+</body>
+
+</html>
