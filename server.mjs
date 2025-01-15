@@ -26,6 +26,8 @@ const server = http.createServer((req, res) => {
         filePath = path.join(__dirname, 'checkout', 'complete', 'index.html');
     } else if (req.url.startsWith('/checkout/')) {
         filePath = path.join(__dirname, 'checkout', 'index.html');
+    } else if (req.url.startsWith('/contact-us/')) {
+        filePath = path.join(__dirname, 'contact-us', 'index.html');
     }
 
     const extname = String(path.extname(filePath)).toLowerCase();
